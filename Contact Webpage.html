@@ -8,7 +8,21 @@
       box-sizing: border-box;
     }
     
-    body {
+    .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.item {
+  flex-basis: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+body {
       font-family: 'Noto Sans';
       text-align:center ;
     }
@@ -70,8 +84,8 @@
     </header>
     
 <body>
-    
-      <div id="Contact Information">
+    <div class="container">
+      <div class="item">
         <h1> W/Friends Contact Information </h1>
 
         
@@ -80,7 +94,9 @@
         <p>  
           Phone Number: 0882221777 Email: mboRijnlandWithFriends@gmail.com <br> Address: Van Doornenplantsoen 11<br> 2722 ZA Zoetermeer 
         </p>
+      </div>
 
+      <div class="item" >
         <h1> Submit a Question </h1>
 
         <form>
@@ -97,6 +113,8 @@
         </form>
 
       </div>
+      
+    </div>
 
       <div class="footer">
         <footer>
