@@ -12,7 +12,7 @@
         //     return $stmt->fetchAll(PDO::FETCH_OBJ);
         // }
         public function getCode(){
-            $sql = "SELECT friendCode FROM users WHERE name = 'Kenan'";
+            $sql = "SELECT friendCode FROM users";
             $stmt= $this->connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);
