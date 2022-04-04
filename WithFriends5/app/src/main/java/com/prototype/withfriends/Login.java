@@ -19,10 +19,8 @@ public class Login extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
         binding = LoginBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

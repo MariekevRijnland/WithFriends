@@ -68,4 +68,20 @@
             android:id="@+id/email" android:textColorHint="#D8698687" app:layout_constraintHorizontal_bias="0.497"
             android:layout_marginTop="36dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/TextPassword"/>
+    <TextView
+            android:text="@string/if_you_forgot_your_password_click_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/registerButton"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="@string/reset"
+            android:layout_width="84dp"
+            android:layout_height="38dp" android:id="@+id/resetButton"
+            android:background="@null" android:backgroundTint="#FFFFFF"
+            android:hapticFeedbackEnabled="false" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:textColor="#03A9F4"
+            app:layout_constraintVertical_bias="0.087"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

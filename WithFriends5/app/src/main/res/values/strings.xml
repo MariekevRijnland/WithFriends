@@ -16,4 +16,7 @@
     <string name="Register">Register</string>
     <string name="register">register</string>
     <string name="confirm">confirm</string>
+    <string name="max">max</string>
+    <string name="if_you_forgot_your_password_click_here">If you forgot your password click here</string>
+    <string name="reset">reset</string>
 </resources>
