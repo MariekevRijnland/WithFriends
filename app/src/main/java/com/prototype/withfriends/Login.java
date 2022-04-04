@@ -33,6 +33,13 @@ public class Login extends Fragment {
                         .navigate(R.id.action_LoginFragment_to_RegisterFragment);
             }
         });
+        binding.recoveryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Login.this)
+                        .navigate(R.id.action_LoginFragment_to_RecoveryFragment);
+            }
+        });
     }
 
     @Override

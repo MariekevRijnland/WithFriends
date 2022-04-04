@@ -26,13 +26,7 @@ public class Register extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.confirmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Register.this)
-                        .navigate(R.id.action_LoginFragment_to_RegisterFragment);
-            }
-        });
+
     }
 
     @Override

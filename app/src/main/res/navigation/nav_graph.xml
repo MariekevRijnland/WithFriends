@@ -9,11 +9,14 @@
             android:id="@+id/loginFragment"
             android:name="com.prototype.withfriends.Login"
             android:label="@string/Login"
-            tools:layout="@layout/login_fragment">
+            tools:layout="@layout/login_fragment" tools:ignore="ExtraText">
 
         <action
                 android:id="@+id/action_LoginFragment_to_RegisterFragment"
                 app:destination="@id/registerFragment"/>
+        <action
+                android:id="@+id/action_LoginFragment_to_RecoveryFragment"
+                app:destination="@id/recoveryFragment"/>
     </fragment>
     <fragment
             android:id="@+id/registerFragment"
@@ -25,4 +28,9 @@
                 android:id="@+id/action_SecondFragment_to_FirstFragment"
                 app:destination="@id/loginFragment"/>
     </fragment>
+    <fragment android:id="@+id/recoveryFragment" android:name="com.prototype.withfriends.Recovery"
+              android:label="Recovery" tools:layout="@layout/recovery_fragment"/>
+        <action
+                android:id="@+id/action_recoveryFragment_to_loginFragment"
+                app:destination="@id/loginFragment"/>
 </navigation>

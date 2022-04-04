@@ -12,11 +12,23 @@
     <string name="Login">Login</string>
     <string name="LOGIN">LOGIN</string>
     <string name="password">password</string>
-    <string name="email">      email      </string>
     <string name="Register">Register</string>
     <string name="register">register</string>
     <string name="confirm">confirm</string>
     <string name="max">max</string>
     <string name="if_you_forgot_your_password_click_here">If you forgot your password click here</string>
     <string name="reset">reset</string>
+    <string name="recovery">Recovery</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="email">email</string>
+    <string name="name">name</string>
+    <string name="surname">surname</string>
+    <string name="insert_your_account_details">INSERT YOUR ACCOUNT DETAILS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date_of_birth">date of birth</string>
+    <string name="input_your_email_please">Input your email please</string>
+    <string name="type_your_email_and_press_confirm_nyou_will_receive_an_email_shortly">Type your email and press
+        confirm. \nYou will receive an email shortly
+    </string>
 </resources>
