@@ -34,6 +34,12 @@ body{
     flex-direction: row;
   }
 
+.errorMessage {
+  color: red !important;
+  width: 300px;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 1200px){ /*Desktop*/
   #dubb{
     flex-direction: row;
