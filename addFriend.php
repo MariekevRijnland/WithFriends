@@ -6,7 +6,7 @@ $friend = null;
 
 
 foreach ($users as $userIns) {
-    if (strval($userIns->friendCode) == $_GET['friendCode']) {
+    if (isset($userIns->friendCode) && strval($userIns->friendCode) == $_GET['friendCode']) {
         $friend = $user->getUserById($userIns->userID);
     }
 }
