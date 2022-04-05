@@ -11,8 +11,8 @@
         //     $stmt->execute();
         //     return $stmt->fetchAll(PDO::FETCH_OBJ);
         // }
-        public function getCode($username){
-            $sql = "SELECT friendCode FROM users WHERE name = ". $username .";";
+        public function getCode(){
+            $sql = "SELECT friendCode from users limit 1;";
             $stmt= $this->connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);

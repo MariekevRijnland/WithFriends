@@ -84,6 +84,16 @@ class User extends DbConfig
             return $randNum;
         }
     }
+
+
+    public function getUsername(){
+        $sql = "SELECT name from users limit 1;";
+        $stmt= $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }
+
+
 
 ?>
