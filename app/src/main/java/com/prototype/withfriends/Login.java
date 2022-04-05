@@ -40,6 +40,27 @@ public class Login extends Fragment {
                         .navigate(R.id.action_LoginFragment_to_RecoveryFragment);
             }
         });
+        binding.contactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Login.this)
+                        .navigate(R.id.action_loginFragment_to_ContactFragment);
+            }
+        });
+        binding.faqButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Login.this)
+                        .navigate(R.id.action_loginFragment_to_FaqFragment);
+            }
+        });
+        binding.policiesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Login.this)
+                        .navigate(R.id.action_loginFragment_to_PoliciesFragment);
+            }
+        });
     }
 
     @Override

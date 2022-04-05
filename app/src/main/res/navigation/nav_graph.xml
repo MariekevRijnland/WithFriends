@@ -17,6 +17,15 @@
         <action
                 android:id="@+id/action_LoginFragment_to_RecoveryFragment"
                 app:destination="@id/recoveryFragment"/>
+        <action
+                android:id="@+id/action_loginFragment_to_ContactFragment"
+                app:destination="@id/contactFragment"/>
+        <action
+                android:id="@+id/action_loginFragment_to_FaqFragment"
+                app:destination="@id/faqFragment"/>
+        <action
+                android:id="@+id/action_loginFragment_to_PoliciesFragment"
+                app:destination="@id/policiesFragment"/>
     </fragment>
     <fragment
             android:id="@+id/registerFragment"
@@ -33,4 +42,11 @@
         <action
                 android:id="@+id/action_recoveryFragment_to_loginFragment"
                 app:destination="@id/loginFragment"/>
+    <fragment android:id="@+id/contactFragment" android:name="com.prototype.withfriends.Contact"
+              android:label="Contact" tools:layout="@layout/contact_fragment"/>
+    <fragment android:id="@+id/faqFragment" android:name="com.prototype.withfriends.Faq"
+                 android:label="Faq" tools:layout="@layout/faq_fragment"/>
+    <fragment android:id="@+id/policiesFragment" android:name="com.prototype.withfriends.Policies"
+              android:label="Policies" tools:layout="@layout/policies_fragment"/>
+
 </navigation>

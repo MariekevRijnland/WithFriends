@@ -28,7 +28,26 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="date_of_birth">date of birth</string>
     <string name="input_your_email_please">Input your email please</string>
-    <string name="type_your_email_and_press_confirm_nyou_will_receive_an_email_shortly">Type your email and press
+    <string name="type_your_email_and_press_confirm_you_will_receive_an_email_shortly">Type your email and press
         confirm. \nYou will receive an email shortly
     </string>
+    <string name="faq">FAQ</string>
+    <string name="logo">logo</string>
+    <string name="policies">policies</string>
+    <string name="contacts">contacts</string>
+    <string name="Contacts">Contacts:</string>
+    <string name="FAQ">FAQ:</string>
+    <string name="Policies">Policies:</string>
+    <string name="emaill">Email:</string>
+    <string name="mborijnlandwithfriends_gmail_com">mboRijnlandWithFriends@gmail.com</string>
+    <string name="number">Number:</string>
+    <string name="_31_088_222_1777">+31 088 222 1777</string>
+    <string name="van_doornenplantsoen_11_2722_za_zoetermeer">Van Doornenplantsoen 11, 2722 ZA Zoetermeer</string>
+    <string name="address">Address:</string>
+    <string name="type_your_email_and_press_confirm_you_will_receive_an">Type your email and press confirm you will
+        receive an email shortly
+    </string>
+    <string name="type_your_query_here">Type your query here...</string>
+    <string name="submit">Submit</string>
+    <string name="any_question">Any question?</string>
 </resources>

@@ -9,7 +9,7 @@
 
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64dp"
+            android:layout_height="54dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/textPassword2"
@@ -19,11 +19,11 @@
             android:textColorHint="#A4618787"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editDate"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/textPassword"/>
+            app:layout_constraintTop_toBottomOf="@+id/editDate"
+            app:layout_constraintBottom_toTopOf="@+id/textPassword"/>
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64dp"
+            android:layout_height="54dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/textPassword"
@@ -34,7 +34,7 @@
             app:layout_constraintBottom_toTopOf="@+id/registerButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textPassword2"/>
+            app:layout_constraintTop_toBottomOf="@+id/textPassword2" android:layout_marginBottom="8dp"/>
     <Button
             android:id="@+id/registerButton"
             android:layout_width="114dp"
@@ -44,8 +44,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:backgroundTint="#2196F3"
-            android:layout_marginBottom="32dp" app:layout_constraintHorizontal_bias="0.498"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textPassword"/>
+            android:layout_marginBottom="16dp" app:layout_constraintHorizontal_bias="0.498"
+    />
     <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -55,7 +55,7 @@
     </com.google.android.material.textfield.TextInputLayout>
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64dp"
+            android:layout_height="54dp"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/emailText"
@@ -64,45 +64,55 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             android:scrollbarSize="4dp" android:textSize="18sp"
             android:textColorHint="#8B618787" app:layout_constraintHorizontal_bias="0.502"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/nameText"/>
+            app:layout_constraintBottom_toTopOf="@+id/nameText"/>
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64dp"
+            android:layout_height="54dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/nameText"
             android:hint="@string/name" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/emailText"
-            android:layout_marginTop="8dp" android:scrollbarSize="4dp"
+            android:scrollbarSize="4dp"
             android:textSize="18sp" android:textColorHint="#94618787" app:layout_constraintHorizontal_bias="0.502"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/surnameText"/>
+            app:layout_constraintBottom_toTopOf="@+id/surnameText"/>
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64dp"
+            android:layout_height="54dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/surnameText"
             android:hint="@string/surname"
             app:layout_constraintTop_toBottomOf="@+id/nameText" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             android:textColorHint="#8B618787" app:layout_constraintHorizontal_bias="0.497"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/editDate"/>
+            app:layout_constraintBottom_toTopOf="@+id/editDate"/>
     <TextView
             android:text="@string/insert_your_account_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView2"
             android:textColor="#03A9F4" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp" android:textSize="20sp" app:layout_constraintHorizontal_bias="0.495"/>
+            android:layout_marginTop="8dp" android:textSize="20sp" app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintBottom_toTopOf="@+id/emailText"/>
     <EditText
             android:layout_width="238dp"
-            android:layout_height="64sp"
+            android:layout_height="54sp"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/editDate" android:layout_marginTop="8dp"
+            android:id="@+id/editDate"
             app:layout_constraintTop_toBottomOf="@+id/surnameText"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/textPassword2"
+            app:layout_constraintBottom_toTopOf="@+id/textPassword2"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.452" android:hint="@string/date_of_birth" android:textColorHint="#8B618787"/>
+            app:layout_constraintVertical_bias="0.452" android:hint="@string/date_of_birth"
+            android:textColorHint="#8B618787"/>
+    <CheckBox
+            android:text="Accept terms and conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/checkBox"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/registerButton"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

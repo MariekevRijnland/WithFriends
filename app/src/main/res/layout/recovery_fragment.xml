@@ -19,7 +19,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
-            android:text="@string/type_your_email_and_press_confirm_nyou_will_receive_an_email_shortly"
+            android:text="@string/type_your_email_and_press_confirm_you_will_receive_an"
             android:layout_width="266dp"
             android:layout_height="162dp" android:id="@+id/textForRecovery"
             app:layout_constraintStart_toStartOf="parent"
