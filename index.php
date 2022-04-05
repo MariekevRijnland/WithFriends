@@ -1,15 +1,7 @@
-<?php 
-
-
-
-
-
-
-
-
-?>
+<?php ?>
 <html>
 
+<<<<<<< HEAD
   <body id="markers-on-the-map">
     <b>Den Haag</b>, <b>Rotterdam</b> and <b>Leiden</b> 
     <div id="map"></div>
@@ -23,3 +15,8 @@
   </script>
   </body>
 </html>
+=======
+</section>
+</html>
+<?php ?>
+>>>>>>> 6d3cb71e91f47e0057aa4ab0195377ba17d2731f
