@@ -1,19 +1,8 @@
 <?php 
+require_once 'partials/autoLoader.php';
+require_once 'classes/DbConfig.php';
 
-
-class DbConfig {
-
-    public function connect(){
-        try{
-            $conn = new PDO("mysql:host=38.242.233.110;port=3306;dbname=wfriends", 'marly', 'LeidenPlymouth1');
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conn;
-        }catch(PDOException $e){
-            echo $e->getMessage();
-        }
-    }
-
-}
+  
 
 ?>
 <html>
@@ -65,6 +54,26 @@ class DbConfig {
   </div>
   <script src="js/global.js"></script>
 </header>
+
+
+<?php 
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "wfriends";
+  
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+     $sql =  "SELECT * FROM location";
+     $result = mysqli_query($conn, $sql);
+     
+
+
+?>
 
 
   <body id="markers-on-the-map">
