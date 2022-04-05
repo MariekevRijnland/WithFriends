@@ -18,14 +18,14 @@ foreach ($users as $userIns) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" type="text/css" href="css/addFriend.css">
     <title>Document</title>
 </head>
 <body>
 <?php
-require_once 'partials/header.html'
+require_once './partials/header.php'
 ?>
 
 <main>
@@ -35,7 +35,7 @@ require_once 'partials/header.html'
 </main>
 
 <?php
-require_once 'partials/footer.html'
+require_once './partials/footer.php'
 ?>
 </body>
 </html>
