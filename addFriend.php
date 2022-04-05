@@ -20,22 +20,22 @@ foreach ($users as $userIns) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" type="text/css" href="css/addFriend.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/addFriend.css">
+    <title>Add Friend</title>
 </head>
-<body>
+
 <?php
 require_once './partials/header.php'
 ?>
-
+<body>
 <main>
-    <h1>You want to add <?= $friend->name ?> as a friend?</h1>
+    <h1>Do you want to add <?= $friend->name ?> as a friend?</h1>
     <input class="addfriend-btn" type="button" value="Yes">
     <input class="addfriend-btn" type="button" value="No">
 </main>
-
+</body>
 <?php
 require_once './partials/footer.php'
 ?>
-</body>
+
 </html>

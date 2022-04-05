@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/map-bg.jpeg');
+}
+
+
+#qrcode {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
