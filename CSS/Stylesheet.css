@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+h3{
+  justify-content: center;
+  text-align: center;
+}
+
+body{
+  background-color: #03045E;
+  height: 100%;
+  width: 100%;
+}
 #box1 {
   display: flex;
   margin-top: 2%;
