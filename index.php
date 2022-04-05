@@ -19,7 +19,7 @@
 
 
   <body id="markers-on-the-map">
-    <div id="map"></div>
+    <div id="map">xd</div>
    
     <script type="text/javascript" src='js/demo.js'></script>
     <script>
