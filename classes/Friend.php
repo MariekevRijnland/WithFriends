@@ -11,15 +11,20 @@
         //     $stmt->execute();
         //     return $stmt->fetchAll(PDO::FETCH_OBJ);
         // }
-        public function getCode($username){
-            $sql = "SELECT friendCode FROM users WHERE name = ". $username .";";
+        public function getCode(){
+            $sql = "SELECT friendCode FROM users WHERE name = 'Kenan'";
             $stmt= $this->connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
-
-        public function getFriend($friendCode){
-            $sql = "SELECT * FROM users WHERE friendcode =".$friendCode;
+        public function getFriend(){
+            $sql = "SELECT * FROM users LIMIT 1";
+            $stmt= $this->connect()->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        }
+        public function getProfilePic(){
+            $sql = "SELECT profilepic FROM `users` WHERE profilepic = 'pfp.png'";
             $stmt= $this->connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);
