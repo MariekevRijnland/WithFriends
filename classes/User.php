@@ -3,12 +3,22 @@ require_once 'DbConfig.php';
 
 class User extends DbConfig
 {
-
-    public function create($username, $email, $password, $confPassword, $birthDate)
+    public function create($username, $email, $password, $confPassword, $birthDate, $captchaResponse)
     {
         try {
+            $responseData = $this->checkReCaptcha($captchaResponse);
+            $users = $this->getUsers();
+
+            foreach ($users as $user) {
+                if ($user->name === $username || $user->email === $email) {
+                    throw new Exception("<p class='errorMessage'>Username or Email already taken. </p>");
+                }
+            }
             if ($password != $confPassword) {
                 throw new Exception("<p class='errorMessage'>Passwords do not match. </p>");
+            }
+            if (!isset($responseData->success) || !$responseData->success) {
+                throw new Exception("<p class='errorMessage'>Failed to complete reCaptcha. </p>");
             }
 
             $friendCode = $this->generateFriendCode();
@@ -29,6 +39,23 @@ class User extends DbConfig
         }
     }
 
+    public function delete($id) {
+        $sql = "DELETE FROM users WHERE userID = :id;";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        header('Location: login.php');
+    }
+
+    public function getUserById($id)
+    {
+        $sql = "SELECT * FROM users WHERE userID = :id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
     public function getUser($username)
     {
         $sql = "SELECT * FROM users WHERE name = :username";
@@ -46,13 +73,44 @@ class User extends DbConfig
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function setUsername($id, $newUsername) {
+        $sql = "UPDATE users SET name = :newUsername WHERE userID = :id;";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":newUsername", $newUsername);
+        $stmt->execute();
+    }
+
+    public function setEmail($id, $newEmail) {
+        $sql = "UPDATE users SET email = :newEmail WHERE userID = :id;";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":newEmail", $newEmail);
+        $stmt->execute();
+    }
+
+    public function changePassword($id, $password, $confPassword) {
+        try {
+            if ($password != $confPassword) {
+                throw new Exception("<p class='errorMessage'>Passwords do not match. </p>");
+            }
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+
+        $encryptedPassword = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
+        $sql = "UPDATE users SET password = :newPassword WHERE userID = :id;";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":newPassword", $encryptedPassword);
+        $stmt->execute();
+    }
+
     public function login($username, $password, $captchaResponse)
     {
         try {
-            $siteKey = '6LfBmkMfAAAAAIgZ_NfOh0H5wyhCQX8sHfVPFq_8';
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $siteKey . '&response=' . $captchaResponse);
-            $responseData = json_decode($verifyResponse);
             $user = $this->getUser($username);
+            $responseData = $this->checkReCaptcha($captchaResponse);
 
             if (!$user) {
                 throw new Exception("<p class='errorMessage'>User does not exist. </p>");
@@ -66,8 +124,8 @@ class User extends DbConfig
 
             session_start();
             $_SESSION['loggedIn'] = true;
-            $_SESSION['username'] = $user->username;
-            header("Location: index.html");
+            $_SESSION['userID'] = $user->userID;
+            header("Location: Setting-page.php");
         } catch (Exception $e) {
             return $e->getMessage();
         }
@@ -84,13 +142,11 @@ class User extends DbConfig
             return $randNum;
         }
     }
-
-
-    public function getUsername(){
-        $sql = "SELECT name from users limit 1;";
-        $stmt= $this->connect()->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    
+    public function checkReCaptcha($captchaResponse) {
+        $siteKey = '6LfBmkMfAAAAAIgZ_NfOh0H5wyhCQX8sHfVPFq_8';
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $siteKey . '&response=' . $captchaResponse);
+        return json_decode($verifyResponse);
     }
 }
 
