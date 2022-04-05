@@ -3,8 +3,6 @@
     <title>Contact Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/header.css">
  <style>
     * {
       box-sizing: border-box;
@@ -66,7 +64,7 @@
       }
 
       #query {
-        width: 80%;
+        width: 100%;
       }
 
       #button{
@@ -80,7 +78,7 @@
     }
   </style>
 </head>
-<!-- <header>
+<header>
       <div id="brand"><a href="/"><img src="images/With_friends_logo.png" alt=""></a></div>
       <nav>
         <ul>
@@ -103,14 +101,13 @@
           </ul>
       </div>
       <script src="js/global.js"></script>
-    </header> -->
+    </header> 
 
  
     
 <body> 
-  <?php 
-  require_once 'partials/header.html';
-  ?>
+  
+  <main>
     <div>
       <div>
         <h1> W/Friends Contact Information </h1>
@@ -148,12 +145,14 @@
       </div>
       
     </div>
-
-
-       
-      <?php 
-  require_once 'partials/footer.html';
-  ?>   
-</body>
-
+    <div class="footer">
+        <footer>
+       <ul>
+          <li><a href="Policy">Policy</a></li>
+          <li><a href="FAQ">FAQ</a></li>
+          <li><a href="Contacts">Contacts</a></li>
+        </ul>
+      </footer>
+      </div>
+        </main>
 </html>
