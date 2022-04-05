@@ -2,7 +2,7 @@
 require_once './partials/autoLoader.php';
 
 
-$curUser = $user->getUserById(10);
+$curUser = $user->getUserById($_SESSION['userID']);
 $content = strval($curUser->friendCode);
 ?>
 <!doctype html>
