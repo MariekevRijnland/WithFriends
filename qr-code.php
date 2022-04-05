@@ -30,7 +30,7 @@ $content = strval($curUser->friendCode);
 </div>
 
 <script type="text/javascript">
-  new QRCode(document.getElementById("qrcode"), content);
+  new QRCode(document.getElementById("qrcode"), "38.242.233.110"+"/addFriend.php?friendCode="+content);
 </script>
 </body>
 </html>
