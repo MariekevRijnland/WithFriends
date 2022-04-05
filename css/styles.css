@@ -244,8 +244,8 @@ a:hover,a span:hover{
     color: #3d73d0;
 }
 #map{
-    width:95%;
-    height:450px;
+    width:100%;
+    height:700px;
     border:1px solid #cdced0;
     background-color:#e4e6e9;
 }
