@@ -1,4 +1,7 @@
 <?php
+require_once './partials/header.php';
+?>
+<?php
 require_once './partials/autoLoader.php';
 
 
@@ -31,3 +34,6 @@ $content = strval($curUser->friendCode);
 </script>
 </body>
 </html>
+<?php
+require_once './partials/footer.php';
+?>
