@@ -15,6 +15,7 @@
     body {
       font-family: 'Noto Sans';
       text-align:center ;
+      background-image: url("./img/map-bg.jpeg");
     }
     
     article {
@@ -62,6 +63,8 @@
         flex-direction:row;
         justify-content: center;
         column-gap: 150px;
+      }
+      div{
       }
 
     @media (max-width: 600px) {
