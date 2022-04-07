@@ -30,14 +30,14 @@ foreach ($users as $userIns) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" type="text/css" href="css/addFriend.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/addFriend.css">
+    <title>Add Friend</title>
 </head>
-<body>
+
 <?php
 require_once './partials/header.php'
 ?>
-
+<body>
 <main>
     <form method="POST">
         <h1>You want to add <?= $friend->name ?> as a friend?</h1>
@@ -45,9 +45,9 @@ require_once './partials/header.php'
         <input class="addfriend-btn" type="submit" value="No" name="no">
     </form>
 </main>
-
+</body>
 <?php
 require_once './partials/footer.php'
 ?>
-</body>
+
 </html>

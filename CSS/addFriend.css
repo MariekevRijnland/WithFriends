@@ -1,7 +1,19 @@
+body {
+    background-image: url('../images/map-bg.jpeg');
+}
+
 main {
     margin: 50px 15%;
+    text-align: center;
+    min-height: 0;
+    
 }
 
 .addfriend-btn {
-
+    padding: 10px;
+    border-radius: 25%;
+}
+.addfriend-btn:hover {
+    background-color: #48CAE4;
+    color: white;
 }
