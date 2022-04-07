@@ -46,9 +46,9 @@
         <break>
 
         <form method="POST">
-            <h3>Change Name</h3>
-                <input type="text" name="name" placeholder="Change name" maxlength="100" size="30" value="<?= $curUser->name ?>">
-                <input type="submit" name="CN" value="Submit">
+            <h3>Change Username</h3>
+                <input type="text" name="name" placeholder="Change name" maxlength="100" size="30" value="<?= $curUser->name ?>"><input type="submit" name="CN" value="Submit">
+                
         <form>
 
         <br></br>
@@ -60,13 +60,14 @@
         <form>
             
         <br></br>
-
+        
         <form method="POST">   
             <h3>Password</h3>
-                <div id="passrow" style="margin-bottom: 10px">
-                    <div id="passcoll">
+                <div id="pass1" style="margin-bottom: 10px">
                         <input type="password" name="password" placeholder="Change password" maxlength="100" size="30">
                         <input type="password" name="passwordConf" placeholder="Confirm password" maxlength="100" size="30">
+                        <br></br>
+                    <div>
                         <input type="submit" name="CP" value="Submit">
                     </div>
                 </div>
@@ -78,11 +79,11 @@
             <h5>Change user profile picture</h5>
             <br></br>
 
-        <form method="POST" id="buttons">
-            <button>Disable account</button>
-            <!-- code for acc disable-->
+        <form method="POST">
+            <input type="submit" name="disable" value="Disable account">
+
             <input type="submit" name="delete" value="Delete account">
-            <!--code for acc delete -->
+
         </form>
         </div>
             <div id="dubb">

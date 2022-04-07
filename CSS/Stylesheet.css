@@ -10,6 +10,7 @@ body{
   height: 100%;
   width: 100%;
 }
+
 #box1 {
   display: flex;
   margin-top: 2%;
@@ -24,14 +25,14 @@ body{
   padding: 50px;
   }
 
-  #passcoll{
+#box1 input{
+  background-color: #ADE8F4;
+  border-radius: 10px;
+}
+
+  #pass1{
     display: flex;
     flex-direction: column;
-  }
-
-  #passrow{
-    display: flex;
-    flex-direction: row;
   }
 
 .errorMessage {
@@ -44,20 +45,24 @@ body{
   #dubb{
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 5vw;
+    margin: 0 8vw;
+    margin-top: 0;
   }
-  
-  button{
+
+  input[type=text],[type=password],[type=email],[type=submit] select {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
-    width: 8vw;
-    height: 2vw;
-  }
-
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
   }
     
   #pfp {
@@ -81,19 +86,25 @@ body{
     justify-content: space-between;
     margin: 0 5vw;
   }
-  
-  button{
+
+  input[type=text],[type=password],[type=email],[type=submit] select {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
-    width: 12vw;
-    height: 3vw;
+    width: 8vw;
+    height: 2vw;
   }
-
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
-  }
+   
 
   #pfp {
     display: flex;
@@ -109,19 +120,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1.3vw;
-  }
-  
-  button{
-    border: none;
-    text-align: center;
-    border-radius: 10px;
-    width: 14vw;
-    height: 10vw;
-  }
-
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
   }
 
   #pfp {
