@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="../CSS/header.css">
     <title>W/ Friends</title>
 </head>
 <header>
@@ -10,7 +10,7 @@
         <li><a href="/products">Messages</a></li>
         <li><a href="/about">Friends</a></li>
         <li><a href="/about">Name</a></li>
-        <img class="circle" src="./images/user.png" alt="">
+        <img class="circle" src="../images/user.png" alt="">
       </ul>
     </nav>
     <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
