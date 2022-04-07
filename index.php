@@ -1,15 +1,19 @@
 <?php
 require_once 'partials/autoLoader.php';
 require_once 'classes/DbConfig.php';
+include 'getLocation.php';
 session_start();
 
 $friends = $user->getFriends();
+$curUser = $user->getUserById($_SESSION['userID']);
 
 echo <<<S
  <script>
     var friends = [];
  </script>
 S;
+
+echo "<script>var myCoords = { lat: $curUser->latitude , long: $curUser->longitude  }</script>";
 
 foreach ($friends as $friendIns) {
     echo "<script>friends.push({ lat: $friendIns->latitude , long: $friendIns->longitude })</script>";
@@ -77,14 +81,6 @@ while ($row = mysqli_fetch_array($result)) {
 <div id="map"></div>
 
 <script type="text/javascript" src='js/demo.js'></script>
-<script>
-
-  function autoRefresh() {
-    window.location = window.location.href;
-  }
-
-  setInterval('autoRefresh()', 600 * 100000);
-</script>
 
 <?php
 require_once 'partials/footer.php';

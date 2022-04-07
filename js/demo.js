@@ -15,10 +15,8 @@
   var  group = new H.map.Group();
 
   friends.forEach(value => {
-    friendCoords.push(new H.map.Marker({lat: value.lat,  lng: value.long}))
+    friendCoords.push(new H.map.Marker({lat: parseFloat(value.lat),  lng: parseFloat(value.long)}))
   });
-  
- 
   
     // add markers to the group
  group.addObjects(friendCoords);
@@ -38,7 +36,7 @@
   // In your own code, replace variable window.apikey with your own apikey
   var platform = new H.service.Platform({
 
-    apikey:  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXq3imVxKrbfJgVW12gZpUN-avXu66ZnI&callback=initMap"
+    apikey:  '5SXPB9A4AkdDjSioYLx0i4642d5MPWgtS1QeC9-mXOQ'
   
   });
   var defaultLayers = platform.createDefaultLayers();
@@ -47,7 +45,7 @@
   // note that all the markers are in North America...
   var map = new H.Map(document.getElementById('map'),
     defaultLayers.vector.normal.map,{
-    center: {lat:52, lng:5},
+    center: {lat: myCoords.lat, lng: myCoords.long},
     zoom: 25,
     pixelRatio: window.devicePixelRatio || 1
   });
