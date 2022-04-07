@@ -33,17 +33,18 @@
 <div class="content">
   <p>You can delete your account on the Account Settings Page and press the “Delete Account” button.</p>
 </div>
-<button type="button" class="collapsible">Am I able to disable the GPS feature at any time? </button>
+<button type="button" class="collapsible">Am I able to disable the GPS feature at any time?</button>
 <div class="content">
   <p>You are able to disable the GPS feature via the settings page, where you can find the option to turn off your GPS tracking.</p>
 </div>
-
-
-
-
-
-
-
+<button type="button" class="collapsible">Where can I find my friends?</button>
+<div class="content">
+  <p>You can find your friends on the side bar or on the friend's page where you can also manage your friends.</p>
+</div>
+<button type="button" class="collapsible">Who is able to view my location?</button>
+<div class="content">
+  <p>Nobody but your friends who you have given permission to see your location, have the ability to view your location on the map, unless you turn off the GPS feature.</p>
+</div>
 <script src="./js/faq.js"></script>
 </body>
 <?php
