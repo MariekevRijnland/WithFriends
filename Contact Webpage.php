@@ -57,6 +57,13 @@
         margin: 10px 0px;
       }
 
+      .container{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        column-gap: 150px;
+      }
+
     @media (max-width: 600px) {
       nav, article {
         width: 100%;
@@ -74,6 +81,12 @@
       .map {
         width: 100%;
       }
+
+      .container{
+        display:flex;
+        flex-direction: column;
+      }
+
       
     }
   </style>
@@ -108,29 +121,30 @@
 <body> 
   
   <main>
-    <div>
+    <div class="container">
       <div>
-        <h1> W/Friends Contact Information </h1>
+        <h1> W/Friends Contact Information</h1><br><br>
 
         
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19586.639779794175!2d4.4924928!3d52.1465086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c663d413a42f%3A0xcaddc0f3c590aca3!2smboRijnland!5e0!3m2!1sen!2snl!4v1649063832258!5m2!1sen!2snl" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
+          <br><br>
         <p>  
-          Phone Number: 0882221777 <br> Email: mboRijnlandWithFriends@gmail.com <br> Address: Van Doornenplantsoen 11<br> 2722 ZA Zoetermeer 
+          <strong>Phone Number:</strong> 0882221777  <br> <strong>Email:</strong> mboRijnlandWithFriends@gmail.com <br> <strong>Address:</strong> Van Doornenplantsoen 11 2722 ZA Zoetermeer 
         </p>
       </div>
 
-      <div>
-        <h1> Submit a Question </h1>
+      <div class="container">
+        
 
         <form class="Contact-Form">
+        <h1> Submit a Question </h1><br><br>
           <div>
-            <label for="name">Name:</label><br>
+            <label for="name"><strong>Name:</strong></label><br>
           <input class="Contact-Input" type="text" size="30" id="name" name="name"><br>
         </div>
 
           <div>
-            <label for="email">Contact Email</label><br>
+            <label for="email"><strong>Contact Email</strong></label><br>
           <input class="Contact-Input" type="text" size="30" id="email" email="email"><br>
         </div>
 

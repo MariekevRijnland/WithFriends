@@ -28,14 +28,14 @@ html {
   header {
     padding: 0 20px;
     background-color: whitesmoke;
-    height: 50px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
   }
   
   #brand img {
     font-weight: bold;
-    width: 80px;
+    width: 160px;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -47,6 +47,8 @@ html {
   
   ul {
     list-style: none;
+    height: 100%;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -70,11 +72,11 @@ html {
   
   .circle {
     position: relative;
-    border-radius: 50%;
-    border: solid black 1px;
-    width: 5vh;
+    border-radius: 40% 40%;
+    width: 6vh;
     object-position: 0px 5px;
-    right: -5px;
+    right: -7px;
+    margin-top: -9px;
   }
   #user li {
     text-decoration: none;
@@ -108,18 +110,15 @@ html {
   .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
     transform: rotate(-45deg) translate(-6px, 6px);
-    background-color: white;
   }
   
   .open .bar2 {
     opacity: 0;
-    background-color: white;
   }
   
   .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-6px, -8px);
     transform: rotate(45deg) translate(-6px, -8px);
-    background-color: white;
   }
   
   .open .mobile-menu {
@@ -127,7 +126,6 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: white;
   }
   
   .mobile-menu {
@@ -185,6 +183,9 @@ html {
       font-family: 'Noto Sans', sans-serif;
 }
 .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
      width: 100%;
      background-color:  whitesmoke;
      text-align: left;
