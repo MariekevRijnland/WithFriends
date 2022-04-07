@@ -1,10 +1,19 @@
-<<<<<<< HEAD
 <?php
 require_once 'partials/autoLoader.php';
 require_once 'classes/DbConfig.php';
+session_start();
 
-$user->get
+$friends = $user->getFriends();
 
+echo <<<S
+ <script>
+    var friends = [];
+ </script>
+S;
+
+foreach ($friends as $friendIns) {
+    echo "<script>friends.push({ lat: $friendIns->latitude , long: $friendIns->longitude })</script>";
+}
 ?>
 <html>
 
@@ -69,75 +78,18 @@ while ($row = mysqli_fetch_array($result)) {
 
 <script type="text/javascript" src='js/demo.js'></script>
 <script>
+
   function autoRefresh() {
     window.location = window.location.href;
   }
 
   setInterval('autoRefresh()', 600 * 100000);
 </script>
-</body>
 
-</div>
-<div class="footer">
-    <footer>
-        <ul>
-            <li><a href="Policy">Policy</a></li>
-            <li><a href="FAQ">FAQ</a></li>
-            <li><a href="Contacts">Contacts</a></li>
-        </ul>
-    </footer>
-</div>
+<?php
+require_once 'partials/footer.php';
+?>
+</body>
 
 
 </html>
-=======
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>W/ Friends</title>
-</head>
-<header>
-    <div id="brand"><a href="/"><img src="images/With_friends_logo.png" alt=""></a></div>
-    <nav>
-        <ul>
-            <li><a href="products">Messages</a></li>
-            <li><a href="about">Friends</a></li>
-            <li><a href="about">Name</a></li>
-            <li><a href="logout.php">Logout</a></li>
-            <img class="circle" src="images/user.png" alt="">
-        </ul>
-    </nav>
-
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-
-
-
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <ul class="mobile-menu">
-            <li><a href="/products">Messages</a></li>
-            <li><a href="/about">Friends</a></li>
-            <li><a href="/about">Name</a></li>
-            <li><a href="logout.php">Logout</a></li>
-            <img class="circle" src="images/user.png" alt="">
-
-        </ul>
-    </div>
-    <script src="js/global.js"></script>
-</header>
-
-
-
-
-      </div>
-    <div class="footer">
-        <footer>
-       <ul>
-          <li><a href="Policy">Policy</a></li>
-          <li><a href="FAQ">FAQ</a></li>
-          <li><a href="Contacts">Contacts</a></li>
-        </ul>
-      </footer>
-      </div>
->>>>>>> develop

@@ -6,13 +6,21 @@
  */
  function addMarkersAndSetViewBounds() {
     // create map objects
-    var leiden = new H.map.Marker({lat:52.160114,  lng:4.497010}),
+    /*var leiden = new H.map.Marker({lat:52.160114,  lng:4.497010}),
         denhaag = new H.map.Marker({lat:52.078663, lng:4.288788}),
          rotterdam = new H.map.Marker({lat:51.926517, lng:4.462456}),
-        group = new H.map.Group();
+        group = new H.map.Group();*/
+
+  var friendCoords = [];
+
+  friends.forEach(value => {
+    friendCoords.push(new H.map.Marker({lat: value.lat,  lng: value.long}))
+  })
+  
+  group = new H.map.Group();
   
     // add markers to the group
- group.addObjects([leiden, denhaag, rotterdam]);
+ group.addObjects(friendCoords);
     map.addObject(group);
   
     // get geo bounding box for the group and set it to the map
