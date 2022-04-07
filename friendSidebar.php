@@ -18,8 +18,8 @@ aside {
     float: right;
     background-color: #00b4d8;
     height: 600px;
-    width: 14%;
-    border-radius: 5%;
+    width: 15%;
+    border-radius: 25px;
 }
 p1{
     font-size: 18px;
@@ -134,9 +134,9 @@ include('index.html');
 </body>
 <aside>
     <!-- Main Focus Managing Friends Sidebar -->
-    <h1>Friends</h1>
+    <h1>Friends add</h1>
     
-    <p1>Add</p1><br>
+    <br>
     <p2>Friend Code: <?php foreach($friend->getCode() as $userIns){
   echo $userIns->friendCode;
 }?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
