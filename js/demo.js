@@ -12,12 +12,13 @@
         group = new H.map.Group();*/
 
   var friendCoords = [];
+  var   group = new H.map.Group();
 
   friends.forEach(value => {
     friendCoords.push(new H.map.Marker({lat: value.lat,  lng: value.long}))
-  })
-
-  var group = new H.map.Group();
+  });
+  
+ 
   
     // add markers to the group
  group.addObjects(friendCoords);
