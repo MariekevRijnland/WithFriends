@@ -1,16 +1,26 @@
+<?php
+require_once 'partials/autoLoader.php';
+session_start();
+
+if (!isset($_SESSION['loggedIn'])) {
+    header('Location: login.php');
+}
+
+$_SESSION["userID"];
+?>
+
 <!DOCTYPE html>
 <html>
 <style>
-nav {
-background-color: #CAF0f8;
-height: 8%;
-}
+
 aside {
+    text-align: center;
     float: right;
-    background-color: #CAF0f8;
-    height: 400px;
-    width: 210px;
-    border-radius: 5%;
+    background-color: #00b4d8;
+    height: 600px;
+    width: 15%;
+    border-radius: 25px;
+    box-shadow: 5px 10px 18px #888888;
 }
 p1{
     font-size: 18px;
@@ -19,11 +29,14 @@ p2{
     font-size: 14px;
 }
 .dropbtn {
-  background-color: #CAF0f8;
-  padding: 8px 75px;
-  font-size: 13px;
-  border: none;
+  background-color: #90e0ef;
+  /* padding: 12px 85px; */
+  font-size: 10px;
+  text-align: center;
+  width: 14vw;
+  height: 8vh;
 }
+.dropbtn
 
 .dropdown {
   position: relative;
@@ -34,7 +47,7 @@ p2{
   display: none;
   position: absolute;
   right: 0;
-  background-color: #ADE8F4;
+  background-color: #90e0ef;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -44,62 +57,78 @@ p2{
   padding: 8px 75px;
   text-decoration: none;
   display: block;
+  width: 8vh;
 }
 .dropdown-content a:hover {background-color: #ADE8F4;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color:#ADE8F4;}
 
 .friendList {
-	background-color:#CAF0f8;
-	border:1px solid #ADE8F4;
+	background-color:#90e0ef;
+	border:1px solid #90e0ef;
 	display:inline-block;
 	font-size:13px;
 	padding: 8px 75px;
+  width: 30vh;
 }
 .friendList:hover {
-	background-color:#ADE8F4;
+	background-color:#90e0ef;
 }
 .friendList:active {
     position:relative;
 	top:1px;
 }
 
-.friendSearch {
-width: 190px;
-height: 14px;
-float: left;
+.search-input {
+width: 75%;
+height: 25px;
+background-color:whitesmoke;
+border-radius: 25px;
+margin-left: 5px;
+text-align: center;
 }
 
-.submitButton {
-  padding: 8px 75px;
+.search-btn {
+  padding: 8px 30px;
   text-align: center;
   display: inline-block;
   font-size: 14px;
   margin: 4px 2px;
+  background-color: whitesmoke;
+  border-radius: 25px;
+}
+
+.search-btn:hover {
+  opacity: 1;
 }
 
 .pfpImage {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
   float: left;
+  position: absolute;
+  left: 88%;
+  margin-top: -1vh;
+
+  /*
   margin-top: 1px;
-  margin-right: 5px;
+  margin-bottom: 1px;
+  left: 95%;
+  margin-right: -5%;
+  */
 }
+
 </style>
 <code>
 <!-- JavaScript When needed -->
 </code>
 <title> W/ Friends | Friends </title>
-<nav>
-    <h1>NAV</h1>
-</nav>
 <body>
 <?php
 require_once 'classes/Friend.php';
-
-
-$postIns = new Friend();
+require_once 'classes/User.php';
+include('index.html');
 // [{'id' => 1, 'title' => 'nfeubeu'}]
 // foreach($postIns->getUser() as $user){
 //   echo $user->friendCode . "<br>";
@@ -109,40 +138,56 @@ $postIns = new Friend();
 </body>
 <aside>
     <!-- Main Focus Managing Friends Sidebar -->
-    <h1>Friends</h1>
-    <p1>List</p1>
-    <div class="dropdown" style="float:right;">
-        <button class="dropbtn" ><img src='img/pfp.png' class="pfpImage" alt="profile image"><?php foreach($postIns->getFriend() as $user){
-  echo $user->name;
-}?></button>
-        <div class="dropdown-content">
-          <button class="friendList">Remove Friend</button>
-        </div>
-    </div>
-    <div class="dropdown" style="float:right;">
-        <button class="dropbtn"><img src='img/pfp.png' class="pfpImage" alt="profile image">Friend</button>
-        <div class="dropdown-content">
-          <button class="friendList">Remove Friend</button>
-        </div>
-    </div>
-    <div class="dropdown" style="float:right;">
-        <button class="dropbtn"><img src='img/pfp.png' class="pfpImage" alt="profile image">Friend</button>
-        <div class="dropdown-content">
-          <button class="friendList">Remove Friend</button>
-        </div>
-    </div>
-    <div class="dropdown" style="float:right;">
-        <button class="dropbtn"><img src='img/pfp.png' class="pfpImage" alt="profile image">Friend</button>
-        <div class="dropdown-content">
-          <button class="friendList">Remove Friend</button>
-        </div>
-    </div></br>
-    <p1>Add</p1><br>
-    <p2>Friend Code: <?php foreach($postIns->getCode() as $user){
-  echo $user->friendCode;
-}?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
-    <input class="friendSearch"type="text" placeholder="Search For Friends...">
+    <h1>Friends add</h1>
+    
     <br>
-    <button class="submitButton">Submit</button>
+    <p2>Friend Code: <?php foreach($friend->getCode() as $userIns){
+  echo $userIns->friendCode;
+}?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
+     <section class="test">
+    <section id="search-box">
+      <form class="item-search-box" method="POST" action="#">
+        <input class="search-input" type="text" name="search" placeholder="Search by friend code.." ></br>
+        <button class="search-btn" type="submit" name="submit-search" value="Zoeken"><i class="fas fa-search"></i>Search</button>
+      </form>
+    </section>
+  </section>
+  <?php
+    require_once 'classes/Friend.php';
+    $serieIns = new Friend();
+    $zoek = new Friend();
+
+    if(isset($_POST["submit-search"])) {
+      // foreach($zoek->search($_POST['search']) as $friends){
+      //   echo $friends;
+      // }
+    }
+?>
+  <section id="fotos">
+            <section id="flex">
+                <?php if(isset($_POST["submit-search"])) {
+                  foreach($zoek->addFriend($_POST['search']) as $friend){?>
+                    <article>
+                        <a href="#" style="color: white;">
+                        <p><?php echo $friend->name; ?></p>
+                        </a>
+                    </article>
+                <?php } }?>
+            </section>
+  </section>
+
+    <p1><strong>List</strong></p1><br>
+<?php foreach($user->getFriends() as $userIns) {?>
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn" ><img src="./img/<?php echo $userIns->profilepic;?>" class="pfpImage">
+         <?php echo $userIns->name;?>
+        </button>
+        <div class="dropdown-content">
+          <button class="friendList">Remove Friend</button>
+        </div>
+    </div>
+  <?php } ?>
+    </div></br>
+ 
 </aside>
 </html>
