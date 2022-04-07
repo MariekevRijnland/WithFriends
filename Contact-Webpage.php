@@ -30,7 +30,7 @@
     height: 200px;
     display: block;
     width: 300px;
-}
+    }
 
     p.para2{
       text-align:center ;
@@ -46,49 +46,49 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
+    }
     
       .Contact-Input{
         width: 300px;
         margin: 5px 0px;
-      }
+    }
 
       .button{
         padding: 10px 40px;
         margin: 10px 0px;
-      }
+    }
 
       .container{
         display:flex;
         flex-direction:row;
         justify-content: center;
         column-gap: 150px;
-      }
+    }
       div{
-      }
+    }
 
     @media (max-width: 600px) {
       nav, article {
         width: 100%;
         height: auto;
-      }
+    }
 
       #query {
         width: 100%;
-      }
+    }
 
       #button{
         margin-bottom: 100px;
-      }
+    }
 
       .map {
         width: 100%;
-      }
+    }
 
       .container{
         display:flex;
         flex-direction: column;
-      }
+    }
 
       
     }
