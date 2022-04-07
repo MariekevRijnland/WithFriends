@@ -17,7 +17,7 @@
     friendCoords.push(new H.map.Marker({lat: value.lat,  lng: value.long}))
   })
 
-  group = new H.map.Group();
+  var group = new H.map.Group();
   
     // add markers to the group
  group.addObjects(friendCoords);
@@ -37,7 +37,7 @@
   // In your own code, replace variable window.apikey with your own apikey
   var platform = new H.service.Platform({
 
-    apikey:  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYgv-qpajrBuq7orUV5x6WhAPjVK2GioU=initMap"
+    apikey:  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYgv-qpajrBuq7orUV5x6WhAPjVK2GioU&callback=initMap"
   
   });
   var defaultLayers = platform.createDefaultLayers();

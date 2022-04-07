@@ -13,7 +13,7 @@ S;
 
 foreach ($friends as $friendIns) {
     echo "<script>friends.push({ lat: $friendIns->latitude , long: $friendIns->longitude })</script>";
-}
+};
 ?>
 <html>
 
@@ -25,12 +25,13 @@ foreach ($friends as $friendIns) {
     <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
     <link rel="stylesheet" href="CSS/style.css">
 
-    <link rel="stylesheet" type="text/css" href="CSS/template.css"/>
     <script type="text/javascript" src='js/test-credentials.js'></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="CSS/template.css"/>
     <title>W/ Friends</title>
 </head>
 
@@ -88,6 +89,7 @@ while ($row = mysqli_fetch_array($result)) {
 <?php
 require_once 'partials/footer.php';
 ?>
+
 </body>
 
 
