@@ -125,7 +125,7 @@ class User extends DbConfig
             session_start();
             $_SESSION['loggedIn'] = true;
             $_SESSION['userID'] = $user->userID;
-            header("Location: map.php");
+            header("Location: index.php");
         } catch (Exception $e) {
             return $e->getMessage();
         }
@@ -157,7 +157,7 @@ class User extends DbConfig
         $stmt->bindParam(":lat", $lat);
         $stmt->execute();
     }
-    
+
     public function getFriends(){
         $sql = "SELECT * FROM users INNER JOIN friends ON friends.userID ='". $_SESSION['userID'] . "' WHERE friends.friendID = users.userID;";
         $stmt = $this->connect()->prepare($sql);
