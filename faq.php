@@ -8,7 +8,7 @@
  require_once './partials/header.php';
 ?>
 <body>
-    <h1>FAQ</h1>
+    <h1>Frequently Asked Questions</h1>
 </body>
 <?php
  require_once './partials/footer.php';
