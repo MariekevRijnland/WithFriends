@@ -1,7 +1,6 @@
-
+<!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <title>W/ Friends</title>
     <title>W/ Friends</title>
 </head>
 <header>
@@ -34,6 +33,8 @@
     </div>
     <script src="js/global.js"></script>
 </header>
+
+
 
 
       </div>
