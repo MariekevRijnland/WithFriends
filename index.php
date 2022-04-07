@@ -78,7 +78,7 @@ require_once 'classes/DbConfig.php';
       echo $row["locationID"];?> <html><br/></html><?php
       echo $row["latitude"];?> <html><br/></html><?php
       echo $row["longitude"];?> <html><br/></html><?php 
-      echo  "<script src='js/demo.js'></script>" ?>
+      echo  "<script></script>" ?>
       
       
       
