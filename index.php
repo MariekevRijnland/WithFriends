@@ -7,20 +7,20 @@ require_once 'classes/DbConfig.php';
 ?>
 <html>
 
-<head>    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">    
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">    
-<title>Zooming to a Set of Markers</title>   
- <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />   
-  <link rel="stylesheet" type="text/css" href="css/demo.css" />    
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />    
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"> 
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Zooming to a Set of Markers</title>
+ <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
 
-<link rel="stylesheet" type="text/css" href="../template.css" />     
+<link rel="stylesheet" type="text/css" href="../template.css" />
 <script type="text/javascript" src='js/test-credentials.js'></script>
- <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>  
-   <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>  
-   <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>   
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>  </head>
+ <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script> 
+ <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+ <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script> 
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script> </head>
 
   <head>
   <link rel="stylesheet" href="css/style.css">
@@ -70,9 +70,20 @@ require_once 'classes/DbConfig.php';
   }
      $sql =  "SELECT * FROM location";
      $result = mysqli_query($conn, $sql);
-     
+     if (mysqli_num_rows($result) > 0)
+      
+     $i=0;
+      while($row = mysqli_fetch_array($result)) {  
 
-
+      echo $row["locationID"];?> <html><br/></html><?php
+      echo $row["latitude"];?> <html><br/></html><?php
+      echo $row["longitude"];?> <html><br/></html><?php 
+      echo  "<script src='js/demo.js'></script>" ?>
+      
+      
+      
+      <?php
+      }
 ?>
 
 
