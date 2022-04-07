@@ -20,6 +20,9 @@ p2{
   background-color: whitesmoke;
   padding: 8px 75px;
   font-size: 20px;
+  border-radius:25px;
+  margin-top:7px;
+  margin-left:7px;
   border: none;
   width: 40vw;
   height: 7vh;
