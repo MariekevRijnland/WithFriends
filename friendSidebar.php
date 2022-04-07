@@ -18,8 +18,9 @@ aside {
     float: right;
     background-color: #00b4d8;
     height: 600px;
-    width: 14%;
-    border-radius: 5%;
+    width: 15%;
+    border-radius: 25px;
+    box-shadow: 5px 10px 18px #888888;
 }
 p1{
     font-size: 18px;
@@ -80,22 +81,25 @@ p2{
 
 .search-input {
 width: 75%;
-height: 20px;
-float: left;
-background-color:#90e0ef;
-border-radius: 20%;
-margin-left: 20px;
+height: 25px;
+background-color:whitesmoke;
+border-radius: 25px;
+margin-left: 5px;
 text-align: center;
 }
 
 .search-btn {
-  padding: 8px 75px;
+  padding: 8px 30px;
   text-align: center;
   display: inline-block;
   font-size: 14px;
   margin: 4px 2px;
-  background-color: #90e0ef;
-  border-radius: 20%;
+  background-color: whitesmoke;
+  border-radius: 25px;
+}
+
+.search-btn:hover {
+  opacity: 1;
 }
 
 .pfpImage {
@@ -190,7 +194,7 @@ echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
 }?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
 
 
-    <p1>List</p1><br>
+    <p1><strong>List</strong></p1><br>
 <?php foreach($user->getFriends() as $userIns) {?>
     <div class="dropdown" style="float:right;">
         <button class="dropbtn" ><img src="./img/<?php echo $userIns->profilepic;?>" class="pfpImage">
