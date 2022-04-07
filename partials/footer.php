@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/8e3512cccd.js" crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +12,11 @@
           <li><a href="Policy">Policy</a></li>
           <li><a href="./Faq.php">FAQ</a></li>
           <li><a href="./Contact with form Webpage.html">Contacts</a></li>
-        </ul>
-      </footer>
-      </div>
+          <a href="login.php">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      </a>
+                    </ul>
+                  </footer>
+                  </div>
 </body>
 </html> 

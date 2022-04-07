@@ -1,6 +1,7 @@
 <?php
 require_once 'partials/autoLoader.php';
 require_once 'partials/header.php';
+require_once 'partials/footer.php';
 
 if (!isset($_SESSION['loggedIn'])) {
     header('Location: login.php');
@@ -136,7 +137,6 @@ function outFunc() {
 <?php
 require_once 'classes/Friend.php';
 require_once 'classes/User.php';
-include('index.php');
 ?>
 <body>
 

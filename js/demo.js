@@ -6,10 +6,10 @@
  */
 function addMarkersAndSetViewBounds() {
   // create map objects
-  /*var leiden = new H.map.Marker({lat:52.160114,  lng:4.497010}),
-      denhaag = new H.map.Marker({lat:52.078663, lng:4.288788}),
-       rotterdam = new H.map.Marker({lat:51.926517, lng:4.462456}),
-      group = new H.map.Group();*/
+  // var leiden = new H.map.Marker({lat:52.160114,  lng:4.497010}),
+  //     denhaag = new H.map.Marker({lat:52.078663, lng:4.288788}),
+  //      rotterdam = new H.map.Marker({lat:51.926517, lng:4.462456}),
+  //     group = new H.map.Group();
 
   var friendCoords = [];
   var group = new H.map.Group();
@@ -47,7 +47,7 @@ var defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.vector.normal.map, {
     center: {lat: myCoords.lat, lng: myCoords.long},
-    zoom: 25,
+    zoom: 12,
     pixelRatio: window.devicePixelRatio || 1
   });
 // add a resize listener to make sure that the map occupies the whole container

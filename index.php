@@ -1,9 +1,10 @@
 <?php
+require_once 'partials/header.php';
+?>
+<?php
 require_once 'partials/autoLoader.php';
 require_once 'classes/DbConfig.php';
 include 'getLocation.php';
-require_once 'partials/autoLoader.php';
-
 
 if (!isset($_SESSION['loggedIn'])) {
     header('Location: login.php');
@@ -45,9 +46,7 @@ foreach ($friends as $friendIns) {
 </head>
 
 <body id="markers-on-the-map">
-<?php
-require_once 'partials/header.php';
-?>
+
 
 <section class="map_container">
     <div id="map"></div>

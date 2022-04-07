@@ -21,7 +21,9 @@ $curUser = $user->getUserById($_SESSION['userID']);
           echo$curUser->name ;
 
         ?></a></li>
+        <a href="./Setting-page.php">
         <img class="circle" src="images/user.png" alt="Profile picture">
+        </a>
       </ul>
     </nav>
     <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
