@@ -33,11 +33,10 @@
 <div class="content">
   <p>You can delete your account on the Account Settings Page and press the “Delete Account” button.</p>
 </div>
-<button type="button" class="collapsible">How do I add my friends?</button>
+<button type="button" class="collapsible">Am I able to disable the GPS feature at any time? </button>
 <div class="content">
-  <p>You can add your friends on the home page or on the friends’ page. There are many ways you can add them using WhatsApp, Facebook or copying the link to your clipboard. Send the link to your friends and they will be able to accept or decline the invite on that link.</p>
+  <p>You are able to disable the GPS feature via the settings page, where you can find the option to turn off your GPS tracking.</p>
 </div>
-
 
 
 
