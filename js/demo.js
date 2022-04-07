@@ -16,7 +16,7 @@
   friends.forEach(value => {
     friendCoords.push(new H.map.Marker({lat: value.lat,  lng: value.long}))
   })
-  
+
   group = new H.map.Group();
   
     // add markers to the group

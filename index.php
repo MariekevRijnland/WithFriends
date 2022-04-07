@@ -22,11 +22,10 @@ foreach ($friends as $friendIns) {
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <title>Zooming to a Set of Markers</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
+    <link rel="stylesheet" href="CSS/style.css">
 
-    <link rel="stylesheet" type="text/css" href="../template.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/template.css"/>
     <script type="text/javascript" src='js/test-credentials.js'></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
