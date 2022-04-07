@@ -35,7 +35,7 @@ if (isset($_POST['login'])) {
                 </p>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Le1HzYfAAAAAP9SdeuzJ7GDta-hWegd8lpABac1"></div>
-      <br/>
+      
     </form>
 
             </form>
