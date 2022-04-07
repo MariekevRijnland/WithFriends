@@ -9,7 +9,7 @@
 
 body{
   font-family: 'Noto Sans', sans-serif;
-  background: #03045E;
+  background-image: url("./img/map-bg.jpeg");
 }
 
 .logo{
