@@ -1,12 +1,9 @@
 <?php
-var_dump($_POST);
+require 'partials/autoLoader.php';
+$json = file_get_contents('php://input');
+$data = json_decode($json);
 
-include 'partials/autoloader.php';
 session_start();
-if(isset($_GET['lat'])) {
-    $user->setLocation($_SESSION['userID'], $_GET['long'], $_GET['lat']);
-}
 
-var_dump($_POST);
+$user->setLocation($_SESSION['userID'], $data->long, $data->lat);
 
-?>

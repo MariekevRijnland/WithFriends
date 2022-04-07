@@ -1,9 +1,3 @@
-
-<html>
-<body>
-
-<p>Click the button to get your coordinates.</p>
-<p id="demo"></p>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
 var x = document.getElementById("demo");
@@ -18,10 +12,6 @@ function update_content(){
       url: "./map.php", // post it back to itself - use relative path or consistent www. or non-www. to avoid cross domain security issues
       cache: false, // be sure not to cache results
     })
-      .done(function() {
-        console.log("Hello world!");
-
-    });   
 
 }
 
@@ -35,22 +25,18 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    // $.post("DbConfig.php", { lat : position.coords.latitude, long : position.coords.longitude  },function(response){
-    //          console.log(response);
-    //      });
 
-    $.post("storeLocation.php",
-  {
-    long: position.coords.longitude,
-    lat: position.coords.latitude
-  })
-    
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  $.ajax({
+    type: "POST",
+    url: "storeLocation.php",
+    contentType: 'application/json',
+    data: JSON.stringify({
+      lat: position.coords.latitude,
+      long: position.coords.longitude
+    }),
+    dataType: 'json'
+  });
 }
 
 window.onload = getLocation;
 </script>
-
-</body>
-</html>
