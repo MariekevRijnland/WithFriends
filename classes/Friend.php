@@ -62,11 +62,26 @@
                 
             }
 
-        public function limit($i){
-            $i = 1;
-            if($i <= 4){
-                $i++;
+            public function getFriendCode(){
+                $sql = "SELECT friendCode FROM users WHERE userID  = '". $_SESSION['userID'] . "'";
+                $stmt= $this->connect()->prepare($sql);
+                $stmt->execute();
+                return $stmt->fetchAll(PDO::FETCH_OBJ);
             }
-        }
+
+            public function limit($i){
+                $i = 1;
+                if($i <= 4){
+                    $i++;
+                }
+            }
+
+            public function deleteFriend(){ 
+                $sql = "SELECT * FROM friends WHERE userID = '". $_SESSION['userID'] ."' AND friendID = friendID ";
+                $stmt= $this->connect()->prepare($sql);
+                $stmt->execute();
+                return $stmt->fetchAll(PDO::FETCH_OBJ);
+            }
+
 }
 ?>
