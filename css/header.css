@@ -1,6 +1,15 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
- *{
+html {
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,14 +28,14 @@
   header {
     padding: 0 20px;
     background-color: whitesmoke;
-    height: 50px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
   }
   
   #brand img {
     font-weight: bold;
-    width: 80px;
+    width: 160px;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -39,6 +48,7 @@
   ul {
     list-style: none;
     height: 100%;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -62,12 +72,11 @@
   
   .circle {
     position: relative;
-    border-radius: 50%;
-    border: solid black 1px;
-    width: 2vw;
+    border-radius: 40% 40%;
+    width: 6vh;
     object-position: 0px 5px;
-    right: -5px;
-    height: 4vh;
+    right: -7px;
+    margin-top: -9px;
   }
   #user li {
     text-decoration: none;
@@ -126,7 +135,6 @@
     left: 0;
     height: calc(100vh - 50px);
     width: 100%;
-    z-index: 10;
   }
   
   .mobile-menu li {
@@ -166,3 +174,4 @@
   
   }
   
+
