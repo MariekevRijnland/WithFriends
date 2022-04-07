@@ -42,7 +42,8 @@ html {
   }
   
   #brand a {
-    color: #09c372;
+    color: black;
+    font-size: 12px;
   }
   
   ul {
@@ -76,7 +77,8 @@ html {
     width: 6vh;
     object-position: 0px 5px;
     right: -7px;
-    margin-top: -9px;
+    margin-top: -5x;
+    font-size: 12px;
   }
   #user li {
     text-decoration: none;
