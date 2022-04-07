@@ -38,7 +38,7 @@
   // In your own code, replace variable window.apikey with your own apikey
   var platform = new H.service.Platform({
 
-    apikey:  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYgv-qpajrBuq7orUV5x6WhAPjVK2GioU&callback=initMap"
+    apikey:  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXq3imVxKrbfJgVW12gZpUN-avXu66ZnI&callback=initMap"
   
   });
   var defaultLayers = platform.createDefaultLayers();
