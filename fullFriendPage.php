@@ -2,11 +2,13 @@
 <html>
 <style>
 main{
-    background-color: #03045E;
+    background-color: #0077B6;
     text-align: center;
     height: 700px;
-    color: #ADE8F4;
+    color: black;
+    background-image: url("./img/map-bg.jpeg");
 }
+
 
 p1{
     font-size: 18px;
@@ -15,18 +17,21 @@ p2{
     font-size: 14px;
 }
 .dropbtn {
-  background-color: #0077B6;
+  background-color: whitesmoke;
   padding: 8px 75px;
-  font-size: 13px;
+  font-size: 20px;
+  border-radius:25px;
+  margin-top:7px;
+  margin-left:7px;
   border: none;
-  width: 49.4vw;
-  height: 10vh;
+  width: 40vw;
+  height: 7vh;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
-  left: 0vw;
+  left: -10vw;
 }
 
 .dropdown-content {
@@ -34,7 +39,8 @@ p2{
   position: absolute;
   right: 0;
   background-color: #ADE8F4;
-  min-width: 160px;
+  width:40vw;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -43,7 +49,7 @@ p2{
   padding: 8px 75px;
   text-decoration: none;
   display: block;
-  width: 49.4vw;
+  width: 40vw;
   right:0;
   z-index: 1;
 }
@@ -56,7 +62,7 @@ p2{
 	border:1px solid #ADE8F4;
 	display:inline-block;
 	font-size:13px;
-  width: 49.4vw;
+  width: 40vw;
   height: 8vh;
 }
 .friendList:hover {
@@ -70,10 +76,10 @@ p2{
 .search-input {
 width: 15vw;
 height: 6vh;
-border-radius: 20%;
+border-radius: 25px;
 text-align: center;
-border: 3px solid #00002e;
-background: #ADE8F4;
+border: 2px solid #00002e;
+background: whitesmoke;
 }
 
 .search-btn {
@@ -82,9 +88,9 @@ background: #ADE8F4;
   display: inline-block;
   font-size: 14px;
   margin: 4px 2px;
-  border-radius: 20%;
-  border: 3px solid #00002e;
-  background: #ADE8F4;
+  border-radius: 25px;
+  border: 2px solid #00002e;
+  background: whitesmoke;
 }
 .pfpImage {
   width: 44px;
@@ -118,8 +124,8 @@ $userClass = new User();
 </body>
 <main>
     <!-- Main Focus Managing Friends Sidebar -->
-    <h1>Friends</h1>
-    <p1>Add</p1><br>
+    <h1>Friends add</h1>
+    <br>
     <p2>Friend Code: <?php foreach($postIns->getCode() as $user){
   echo $user->friendCode;
 }?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
