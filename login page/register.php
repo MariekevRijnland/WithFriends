@@ -34,8 +34,7 @@ if(isset($_POST['register'])){
 	    		<input type="password" name="conf-password" placeholder="Confirm password" required>
                 <input type="date" name="dateOfBirth" placeholder="Date of birth" required>
                 <input type="email" name="email" placeholder="Email address" required>
-	    		<input type="submit" name="register" value="Register">
-            Sign up for account? <a href="login.php">Login here</a>
+	    		<input type="submit" name="register" value="Register"><strong>Sign up for account?</strong> <a href="login.php">Login here</a>
           </p>
  <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Le1HzYfAAAAAP9SdeuzJ7GDta-hWegd8lpABac1"></div>

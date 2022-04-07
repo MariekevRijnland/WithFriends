@@ -17,8 +17,17 @@ div{
   background: #0077B6;
 }
 
+a{
+  background: #0077B6;
+  color:#90E0EF;
+}
+
+strong{
+   background: #0077B6;
+}
+
 .logo{
-    height: 130px;
+    height: 140px;
     width: 140px;
     background: #0077B6;
 }
@@ -27,13 +36,13 @@ div{
     padding: 10px;
     padding-left:40px;
     padding-right:40px;
-    border-radius: 50px;
+    border-radius: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #0077B6;
-    border: 3px #ADE8F4 solid;
+    border: 2px #ffffff solid;
     text-align: center;
     box-shadow: 5px 10px 18px #888888;
 }

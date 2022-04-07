@@ -30,8 +30,7 @@ if (isset($_POST['login'])) {
                 <input type="password" name="password" placeholder="Password" required>
                 <input type="submit" name="login" value="Login">
                 <input type="hidden" name="token_generate" id="token_generate">
-                <p class="login">
-                  New? <a href="register.php">Click here to register.</a>
+                <p class="login"><strong>New?</strong> <a href="register.php">Click here to register.</a>
                 </p>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Le1HzYfAAAAAP9SdeuzJ7GDta-hWegd8lpABac1"></div>
