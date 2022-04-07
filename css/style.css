@@ -127,8 +127,8 @@ html {
     align-items: center;
     justify-content: flex-start;
     z-index: 1;
-   background-color: whitesmoke;
-   margin-top: -20;
+    background-color: whitesmoke;
+    margin-top: -20;
   }
   
   .mobile-menu {
