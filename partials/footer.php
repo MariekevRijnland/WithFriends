@@ -9,8 +9,8 @@
         <footer>
        <ul>
           <li><a href="Policy">Policy</a></li>
-          <li><a href="FAQ">FAQ</a></li>
-          <li><a href="Contacts">Contacts</a></li>
+          <li><a href="./Faq.php">FAQ</a></li>
+          <li><a href="./Contact with form Webpage.html">Contacts</a></li>
         </ul>
       </footer>
       </div>

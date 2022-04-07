@@ -1,16 +1,26 @@
+<?php
+require_once './classes/User.php';
+require_once './partials/autoLoader.php';
+session_start();
 
+$curUser = $user->getUserById($_SESSION['userID']);
+?>
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="css/style.css">
     <title>W/ Friends</title>
 </head>
 <header>
-    <div id="brand"><a href="/"><img src="images/With_friends_logo.png" alt="With Friends Logo"></a></div>
+    <div id="brand"><a href="./index.php"><img src="images/With_friends_logo.png" alt="With Friends Logo"></a></div>
     <nav>
       <ul>
-        <li><a href="/products">Messages</a></li>
-        <li><a href="/about">Friends</a></li>
-        <li><a href="/about">Name</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="./fullFriendPage.php">Friends</a></li>
+        <li><a href="./Setting-page.php"><?php 
+
+          echo$curUser->name ;
+
+        ?></a></li>
         <img class="circle" src="images/user.png" alt="Profile picture">
       </ul>
     </nav>

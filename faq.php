@@ -6,6 +6,7 @@
 </head>
 <?php
  require_once './partials/header.php';
+ require_once './classes/User.php';
 ?>
 <body>
     <h1>Fequently Asked Questions</h1>

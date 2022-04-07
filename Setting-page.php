@@ -1,7 +1,8 @@
 <?php
     $error = '';
     require_once 'partials/autoLoader.php';
-    session_start();
+    require_once 'partials/header.php';
+
 
     if (!isset($_SESSION['loggedIn'])) {
         header('Location: login.php');
@@ -38,7 +39,7 @@
     <title>Setting page</title>
 </head>
 <body>
-<?php require_once 'partials/header.html'?>
+<?php require_once 'partials/header.php'?>
 
 <main>
     <div id="box1">
@@ -93,7 +94,7 @@
     </div>
 </main>
 
-<?php require_once 'partials/footer.html'?>
+<?php require_once 'partials/footer.php'?>
 
 </body>
 </html>

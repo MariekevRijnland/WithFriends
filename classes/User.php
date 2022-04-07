@@ -125,6 +125,7 @@ class User extends DbConfig
             session_start();
             $_SESSION['loggedIn'] = true;
             $_SESSION['userID'] = $user->userID;
+            $_SESSION['logUsr'] = $LogUsr->logUsr;
             header("Location: index.php");
         } catch (Exception $e) {
             return $e->getMessage();

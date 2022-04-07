@@ -1,6 +1,6 @@
 <?php
 require_once 'partials/autoLoader.php';
-session_start();
+require_once 'partials/header.php';
 
 if (!isset($_SESSION['loggedIn'])) {
     header('Location: login.php');
@@ -142,7 +142,7 @@ function outFunc() {
 <?php
 require_once 'classes/Friend.php';
 require_once 'classes/User.php';
-include('index.html');
+// include('index.html');
 // [{'id' => 1, 'title' => 'nfeubeu'}]
 // foreach($postIns->getUser() as $user){
 //   echo $user->friendCode . "<br>";
