@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="./CSS/header.css">
-    <title>W/ Friends</title>
+    <title>W/Friends</title>
 </head>
 <header>
     <div id="brand"><a href="/"><img src="./images/With_friends_logo.png" alt=""></a></div>

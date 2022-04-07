@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+    font-family: "Noto Sans", sans-serif;
+}
 body {
     background-image: url('../images/map-bg.jpeg');
+    z-index: 5;
+}
+.backdrop {
+    position: relative;
+    top: 70px;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    width: 276px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-#qrcode {
-
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
+.add {
+    position: relative;
+    text-align: center;
+    background-color: whitesmoke;
+    width: 350px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
 }

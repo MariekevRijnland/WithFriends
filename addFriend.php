@@ -21,7 +21,7 @@ foreach ($users as $userIns) {
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/addFriend.css">
-    <title>Add Friend</title>
+    <title>W/Friends | Add Friend</title>
 </head>
 
 <?php
