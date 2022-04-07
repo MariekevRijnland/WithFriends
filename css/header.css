@@ -14,17 +14,12 @@ html {
     margin: 0;
     box-sizing: border-box;
   }
-  
   body {
     background-color: white;
     color: black;
     font-family: "Poppins", sans-serif;
   }
-  
-  header a {
-    text-decoration: none;
-  }
-  
+  header a {text-decoration: none;}
   header {
     padding: 0 20px;
     background-color: whitesmoke;
@@ -32,7 +27,6 @@ html {
     display: flex;
     justify-content: space-between;
   }
-  
   #brand img {
     font-weight: bold;
     width: 160px;
@@ -40,12 +34,10 @@ html {
     align-items: center;
     z-index: 2;
   }
-  
   #brand a {
     color: black;
     font-size: 12px;
   }
-  
   ul {
     list-style: none;
     height: 100%;
@@ -55,22 +47,16 @@ html {
     justify-content: space-around;
   }
   
-  ul a {
-    color: black;
-  }
-  ul a:hover{
-    color:  #48CAE4;
-  }
+  ul a {color: black;}
+  ul a:hover{color:  #48CAE4;}
   ul li {
     padding: 5px;
     margin-left: 10px;
   }
-  
   ul li:hover {
     transform: scale(1.1);
     transition: 0.3s;
   }
-  
   .circle {
     position: relative;
     border-radius: 40% 40%;
@@ -89,18 +75,13 @@ html {
     position: relative;
     right: 200px;
     float: left;
-  
   }
-  #login a {
-    color: #498afb;
-  }
-  
+  #login a {color: #498afb;}
   #hamburger-icon {
     margin: auto 0;
     display: none;
     cursor: pointer;
   }
-  
   #hamburger-icon div {
     width: 35px;
     height: 3px;
@@ -108,28 +89,21 @@ html {
     margin: 6px 0;
     transition: 0.4s;
   }
-  
   .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
     transform: rotate(-45deg) translate(-6px, 6px);
   }
-  
-  .open .bar2 {
-    opacity: 0;
-  }
-  
+  .open .bar2 {opacity: 0;}
   .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-6px, -8px);
     transform: rotate(45deg) translate(-6px, -8px);
   }
-  
   .open .mobile-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }
-  
   .mobile-menu {
     display: none;
     position: absolute;
@@ -138,19 +112,11 @@ html {
     height: calc(100vh - 50px);
     width: 100%;
   }
-  
-  .mobile-menu li {
-    margin-bottom: 10px;
-  }
+  .mobile-menu li {margin-bottom: 10px;}
   
   @media only screen and (min-width: 100px) and (max-width: 999px){
-    header nav {
-      display: none;
-    }
-  
-    #hamburger-icon {
-      display: block;
-    }
+    header nav {display: none;}
+    #hamburger-icon {display: block;}
     #brand img {
       font-weight: bold;
       width: 200px;
@@ -173,7 +139,6 @@ html {
       width: 100%;
       font-size: 50px;
     }
-  
   }
   
 
