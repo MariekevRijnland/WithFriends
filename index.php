@@ -2,7 +2,8 @@
 require_once 'partials/autoLoader.php';
 require_once 'classes/DbConfig.php';
 include 'getLocation.php';
-session_start();
+require_once 'partials/autoLoader.php';
+
 
 if (!isset($_SESSION['loggedIn'])) {
     header('Location: login.php');
