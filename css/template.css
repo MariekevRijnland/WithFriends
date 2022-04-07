@@ -245,9 +245,14 @@ a:hover,a span:hover{
 }
 #map{
     width:95%;
-    height:450px;
+    height: 75vh;
     border:1px solid #cdced0;
     background-color:#e4e6e9;
+}
+.map_container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
 }
 #panel{
     /* min-height:400px;

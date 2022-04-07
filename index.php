@@ -4,6 +4,10 @@ require_once 'classes/DbConfig.php';
 include 'getLocation.php';
 session_start();
 
+if (!isset($_SESSION['loggedIn'])) {
+    header('Location: login.php');
+}
+
 $friends = $user->getFriends();
 $curUser = $user->getUserById($_SESSION['userID']);
 
@@ -39,46 +43,14 @@ foreach ($friends as $friendIns) {
     <title>W/ Friends</title>
 </head>
 
+<body id="markers-on-the-map">
 <?php
 require_once 'partials/header.php';
 ?>
 
-
-<?php
-/*$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "wfriends";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-$sql = "SELECT * FROM location";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0)
-
-    $i = 0;
-while ($row = mysqli_fetch_array($result)) {
-
-    echo $row["locationID"]; */?><!--
-    <html><br/></html><?php
-/*    echo $row["latitude"]; */?>
-    <html><br/></html><?php
-/*    echo $row["longitude"]; */?>
-    <html><br/></html><?php
-/*    echo "<script></script>" */?>
-
-
-    --><?php
-/*}
-*/?>
-
-
-<body id="markers-on-the-map">
-<div id="map"></div>
+<section class="map_container">
+    <div id="map"></div>
+</section>
 
 <script type="text/javascript" src='js/demo.js'></script>
 
