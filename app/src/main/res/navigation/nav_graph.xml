@@ -26,6 +26,9 @@
         <action
                 android:id="@+id/action_loginFragment_to_PoliciesFragment"
                 app:destination="@id/policiesFragment"/>
+        <action
+                android:id="@+id/action_loginFragment_to_loggedHomepageFragment"
+                app:destination="@id/loggedHomepageFragment"/>
     </fragment>
     <fragment
             android:id="@+id/registerFragment"
@@ -49,4 +52,22 @@
     <fragment android:id="@+id/policiesFragment" android:name="com.prototype.withfriends.Policies"
               android:label="Policies" tools:layout="@layout/policies_fragment"/>
 
+    <fragment android:id="@+id/loggedHomepageFragment" android:name="com.prototype.withfriends.LoggedHomepage"
+              android:label="LoggedHomepage" tools:layout="@layout/logged_homepage_fragment"/>
+    <action
+            android:id="@+id/action_loggedHomePageFragment_to_contactFragment"
+            app:destination="@id/contactFragment"/>
+    <action
+            android:id="@+id/action_loggedHomePageFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"/>
+    <action
+            android:id="@+id/action_loggedHomePageFragment_to_faqFragment"
+            app:destination="@id/faqFragment"/>
+    <action
+            android:id="@+id/action_loggedHomePageFragment_to_policiesFragment"
+            app:destination="@id/policiesFragment"/>
+    <fragment android:id="@+id/settingsFragment" android:name="com.prototype.withfriends.Settings"
+              android:label="Settings" tools:layout="@layout/settings_fragment"/>
+    <fragment android:id="@+id/scrollingActivity" android:name="com.prototype.withfriends.ScrollingActivity"
+              android:label="ScrollingActivitiy" tools:layout="@layout/activity_scrolling"/>
 </navigation>

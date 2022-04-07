@@ -7,9 +7,18 @@
 
     <TextView
             android:text="@string/Policies"
-            android:layout_width="145dp"
-            android:layout_height="80dp" android:id="@+id/policiesText"
+            android:layout_width="162dp"
+            android:layout_height="62dp" android:id="@+id/policiesText"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0" android:textSize="40sp" android:textColor="#00BCD4"/>
+    <TextView
+            android:text="@string/t_t_t_t_t_t_t_t_t_t_t_t_t_t_tcollected_data_nduring_the_use_of_our_services_we_may_collect_data_which_makes_you_identifiable_nwe_reserve_the_right_to_collect_n_t_t_u2022_t_tgps_data_n_t_t_u2022_t_tname_n_t_t_u2022_t_temail_address_nthe_purpose_for_collecting_data_nwe_collect_your_data_with_the_sole_purpose_of_providing_our_services_and_database_with_the_required_data_for_working_functionality_without_the_collection_of_this_data_the_services_will_not_work_as_intended_and_cannot_be_allowed_n_n_t_t_t_t_t_t_t_t_t_t_t_thow_we_collect_this_data_nduring_the_use_of_our_services_we_may_collect_data_which_makes_you_identifiable_nwe_reserve_the_right_to_collect_n_t_t_u2022_t_tgps_tracking_data_n_t_t_u2022_t_tinput_forms_n_t_t_u2022_t_thandling_your_data_nyour_data_will_be_used_for_the_functionality_of_our_services_and_will_not_be_sold_or_shared_with_any_other_parties_outside_of_myfriends_inc_ndata_will_be_held_in_full_compliance_with_regulations_and_timeframes_required_under_gdpr"
+            android:layout_width="334dp"
+            android:layout_height="509dp" android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/policiesText" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" android:textSize="16sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
