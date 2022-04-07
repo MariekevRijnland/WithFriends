@@ -198,8 +198,3 @@ html {
     position: relative;
     color: #48CAE4;
 }
-.logoutLblPos {
-    position: fixed;
-    right: 10px;
-    top: 5px;
-}
