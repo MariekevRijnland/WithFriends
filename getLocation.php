@@ -9,7 +9,7 @@ function update_content(){
 
     $.ajax({
       type: "GET",
-      url: "./map.php", // post it back to itself - use relative path or consistent www. or non-www. to avoid cross domain security issues
+      url: "./getLocation.php", // post it back to itself - use relative path or consistent www. or non-www. to avoid cross domain security issues
       cache: false, // be sure not to cache results
     })
 
