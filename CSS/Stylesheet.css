@@ -155,6 +155,20 @@ body{
     height: 6vw;
   }
 
+  #box1 {
+    display: flex;
+    margin-top: 4%;
+    max-width: 60%;
+    max-height: 70%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #55c2fc;
+    border: 2px #ffffff solid;
+    padding: 50px;
+  }
+
   #pfp {
     display: flex;
     margin-top: -20vh;
