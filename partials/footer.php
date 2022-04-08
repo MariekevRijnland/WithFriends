@@ -12,8 +12,9 @@
           <li><a href="Policy">Policy</a></li>
           <li><a href="./Faq.php">FAQ</a></li>
           <li><a href="./Contact with form Webpage.html">Contacts</a></li>
-          <a href="login.php">
+          <a href="logout.php">
           <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          
                       </a>
                     </ul>
                   </footer>
