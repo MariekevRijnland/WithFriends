@@ -42,6 +42,6 @@ $curUser = $user->getUserById($_SESSION['userID']);
 
       </ul>
     </div>
-    <script src="js/global.js"></script>
+    <script src="js/menu.js"></script>
   </header>
 

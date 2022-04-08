@@ -21,7 +21,7 @@ $content = strval($curUser->friendCode);
         content = toString(content);
     </script>
     <script type="text/javascript" src="../js/qrcode.js"></script>
-    <script type="text/javascript" src="../js/global.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
     <title>W/Friends | QR Code</title>
 </head>
 <?php
