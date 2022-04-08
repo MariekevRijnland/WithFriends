@@ -12,7 +12,7 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="utf-8">
     <title>W/Friends | Register</title>
-    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="stylesheet" href="CSS/login-register.css">
     <link rel="icon" type="image/x-icon" href="image/wfriendslogo.png">
     <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>

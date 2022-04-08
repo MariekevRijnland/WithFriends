@@ -138,11 +138,35 @@ body{
     border-radius: 10px;
   }
 
+  input[type=text],[type=password],[type=email],[type=submit] select {
+    width: 100%;
+    padding: 5px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
   #box1 input[type=submit]{
     background-color: #ADE8F4;
     border-radius: 10px;
     width: 25vw;
     height: 6vw;
+  }
+
+  #box1 {
+    display: flex;
+    margin-top: 4%;
+    max-width: 60%;
+    max-height: 100%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #55c2fc;
+    border: 2px #ffffff solid;
+    padding: 50px;
   }
 
   #pfp {

@@ -154,14 +154,14 @@ html {
     }
     #brand img {
       font-weight: bold;
-      width: 200px;
+      width: 130px;
       display: flex;
       align-items: center;
     }
     header {
       padding: 0 20px;
       background-color: whitesmoke;
-      height: 130px;
+      height: 90px;
       display: flex;
       justify-content: space-between;
     }
@@ -198,6 +198,7 @@ html {
     list-style: none;
     float: left;
     padding: 20px;
+    bottom: 0%;
 }
 .footer a:hover {
     position: relative;
