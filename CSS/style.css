@@ -186,12 +186,13 @@ html {
       font-family: 'Noto Sans', sans-serif;
 }
 .footer {
-     position: fixed;
-     left: 0;
-     bottom: 0;
-     width: 100%;
-     background-color:  whitesmoke;
-     text-align: left;
+  position: relative;
+  left: 0;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  text-align: left;
 }
 .footer li{
     list-style: none;
