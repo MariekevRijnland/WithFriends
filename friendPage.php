@@ -31,7 +31,14 @@ require_once 'classes/User.php';
             ?>
         </p2><br>
         
-        <button class="FB">Facebook</button><br>
+    <div class="fb-share-button" onclick="fb()"
+         data-href="http:/38.242.233.110//WithFriends/addFriend.php?friendCode=<?php foreach ($friend->getFriendCode($_SESSION['userID']) as $userIns) {
+
+             echo $userIns->friendCode;
+         } ?>"
+         data-layout="button_count">
+    </div><br>
+    
         <button class="WA"  
         onclick="window.open('https://web.whatsapp.com:/send?text=http://38.242.233.110/WithFriends/addFriend.php?friendCode=<?php foreach ($friend->getFriendCode($_SESSION['userID']) as $userIns) {
           echo $userIns->friendCode;
@@ -59,6 +66,7 @@ require_once 'classes/User.php';
             </div>                
         <?php } ?>
     </div>
+    <script src="./js/facebook.js"></script>
     <script src="./js/friendpage.js"></script>
 </body>
 <?php

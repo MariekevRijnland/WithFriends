@@ -119,3 +119,7 @@ form {z-index: 3;}
     left: 88%;
     margin-top: -1vh;
 }
+.fb-share-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
