@@ -7,7 +7,8 @@
     if (!isset($_SESSION['loggedIn'])) {
         header('Location: login.php');
     }
-
+    $_SESSION['userID'];
+    
     $curUser = $user->getUserById($_SESSION['userID']);
 
     if (isset($_POST['CN'])) {
@@ -33,9 +34,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/Stylesheet.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./CSS/Stylesheet.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Setting page</title>
 </head>
 <body>
@@ -47,9 +47,9 @@
         <break>
 
         <form method="POST">
-            <h3>Change Name</h3>
-                <input type="text" name="name" placeholder="Change name" maxlength="100" size="30" value="<?= $curUser->name ?>">
-                <input type="submit" name="CN" value="Submit">
+            <h3>Change Username</h3>
+                <input type="text" name="name" placeholder="Change name" maxlength="100" size="30" value="<?= $curUser->name ?>"><input type="submit" name="CN" value="Submit">
+                
         <form>
 
         <br></br>
@@ -61,13 +61,14 @@
         <form>
             
         <br></br>
-
+        
         <form method="POST">   
             <h3>Password</h3>
-                <div id="passrow" style="margin-bottom: 10px">
-                    <div id="passcoll">
+                <div id="pass1" style="margin-bottom: 10px">
                         <input type="password" name="password" placeholder="Change password" maxlength="100" size="30">
                         <input type="password" name="passwordConf" placeholder="Confirm password" maxlength="100" size="30">
+                        <br></br>
+                    <div>
                         <input type="submit" name="CP" value="Submit">
                     </div>
                 </div>
@@ -76,14 +77,11 @@
         
         <br></br>
 
-            <h5>Change user profile picture</h5>
-            <br></br>
+        <form method="POST">
+            <input type="submit" name="disable" value="Disable account">
 
-        <form method="POST" id="buttons">
-            <button>Disable account</button>
-            <!-- code for acc disable-->
             <input type="submit" name="delete" value="Delete account">
-            <!--code for acc delete -->
+
         </form>
         </div>
             <div id="dubb">
