@@ -9,7 +9,9 @@
  require_once './classes/User.php';
 ?>
 <body>
+
     <h1>Fequently Asked Questions</h1>
+
 <button type="button" class="collapsible">Will my data be sold to third parties?</button>
 <div class="content">
   <p>No, your data will not be sold or shared to any other parties but W/Friends Inc.</p>
@@ -26,9 +28,9 @@
 <div class="content">
   <p>No, the Friend code is a unique code generated at registration. Currently we don’t allow the Friend code to be customized.</p>
 </div>
-<button type="button" class="collapsible">How do I remove my friends?</button>
+<button type="button" class="collapsible">Can I remove my friends?</button>
 <div class="content">
-  <p>You can remove your friends on the home page or on the friends' page. You can use the dropdown of the friend you want to remove and simply press “Remove Friend”.</p>
+  <p>No, currently we don't support removing friends.</p>
 </div>
 <button type="button" class="collapsible">How do I delete my account?</button>
 <div class="content">
