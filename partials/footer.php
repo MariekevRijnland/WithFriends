@@ -10,7 +10,7 @@
         <footer>
        <ul>
           <li><a href="Policy">Policy</a></li>
-          <li><a href="./faq.php">FAQ</a></li>
+          <li><a href="faq.php">FAQ</a></li>
           <li><a href="./Contact-Webpage.php">Contacts</a></li>
           <a href="logout.php">
           <i class="fa-solid fa-arrow-right-from-bracket"></i>

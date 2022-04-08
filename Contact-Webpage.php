@@ -97,33 +97,12 @@
     }
   </style>
 </head>
-<header>
-      <div id="brand"><a href="/"><img src="images/With_friends_logo.png" alt=""></a></div>
-      <nav>
-        <ul>
-          <!-- This are all the links to other other pages -->
+<?php
 
-          <li><a href="/products">Messages</a></li>
-          <li><a href="/about">Friends</a></li>
-          <li><a href="/about">Name</a></li>
-          <img class="circle" src="images/user.png" alt="">
-        </ul>
-      </nav>
-      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-       
-        <!-- This is the Hamburger menu that would appear on mobile devices or smaller screens -->
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-          <ul class="mobile-menu">
-            <li><a href="/Messages">Messages</a></li>
-            <li><a href="/Friends">Friends</a></li>
-            <img class="circle" src="images/user.png" alt="">
-            <li><a href="/Name">Name</a></li>
-          </ul>
-      </div>
-      <script src="js/global.js"></script>
-    </header> 
+include 'partials/autoLoader.php';
+
+require_once './partials/header.php';
+?>
 
  
     
@@ -172,15 +151,8 @@
       </div>
       
     </div>
-    <div class="footer">
-        <footer>
-          <!-- This is the responsive footer -->
-       <ul>
-          <li><a href="Policy">Policy</a></li>
-          <li><a href="FAQ">FAQ</a></li>
-          <li><a href="Contacts">Contacts</a></li>
-        </ul>
-      </footer>
-      </div>
+    <?php
+       require_once './partials/footer.php';
+     ?>
         </main>
 </html>
