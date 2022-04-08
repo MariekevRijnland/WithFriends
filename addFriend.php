@@ -1,5 +1,5 @@
 <?php
-require_once './partials/header.php';
+require_once 'partials/header.php';
 include 'partials/autoLoader.php';
 include 'getLocation.php';
 
