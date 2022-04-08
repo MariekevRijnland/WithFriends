@@ -160,18 +160,18 @@ fjs.parentNode.insertBefore(js, fjs);
 
 <!-- Your share button code -->
 <div class="fb-share-button" 
-data-href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
+data-href="http:/38.242.233.110//WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>" 
 data-layout="button_count">
 </div>
 
-<button onclick="window.open('https://web.whatsapp.com:/send?text=localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
+<button onclick="window.open('https://web.whatsapp.com:/send?text=http://38.242.233.110/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>')"> Open WhatsApp </button>
 
 
-<input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
+<input type="text" value="http://38.242.233.110/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
 <div class="tooltip">
@@ -199,5 +199,6 @@ echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
   <?php }
   ?>
     </div></br></br>
+    <?php include('./partials/footer.php');?>
 </main>
 </html>
