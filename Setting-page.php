@@ -1,7 +1,8 @@
 <?php
     $error = '';
     require_once 'partials/autoLoader.php';
-    session_start();
+    require_once 'partials/header.php';
+
 
     if (!isset($_SESSION['loggedIn'])) {
         header('Location: login.php');
@@ -34,15 +35,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/Stylesheet.css">
-    <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Setting page</title>
 </head>
 <body>
-    <?php
-        require_once "partials/header.html";
-    ?>
+<?php require_once 'partials/header.php'?>
+
+<main>
     <div id="box1">
         <div id="dubb">
         <break>
@@ -93,7 +92,7 @@
     </div>
 </main>
 
-<?php require_once 'partials/footer.html'?>
+<?php require_once 'partials/footer.php'?>
 
 </body>
 </html>

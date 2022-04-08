@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {font-family: 'Noto Sans', sans-serif;}
+html {
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+    height: 500px;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    position: relative;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ADE8F4;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #c8c8c8;
+    padding: 20px;
+  }
+  h1 {
+      text-align: center;
+      padding: 10px;
+    }
+body {background-image: url(../images/map-bg.jpeg);}
