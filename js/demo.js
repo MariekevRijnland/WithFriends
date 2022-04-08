@@ -49,7 +49,7 @@ var defaultLayers = platform.createDefaultLayers();
 // note that all the markers are in North America...
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.vector.normal.map, {
-    center: {lat: myCoords.lat, lng: myCoords.long},
+    center: {lat: parseFloat(myCoords.lat), lng: parseFloat(myCoords.long)},
     zoom: 12,
     pixelRatio: window.devicePixelRatio || 1
   });
