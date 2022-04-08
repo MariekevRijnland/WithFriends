@@ -6,9 +6,7 @@ if (!isset($_SESSION['loggedIn'])) {
     header('Location: login.php');
 }
 
-$_SESSION["userID"];
 ?>
-
 <!DOCTYPE html>
 <html>
 <style>
@@ -140,22 +138,29 @@ function outFunc() {
 <title> W/ Friends | Friends </title>
 <body>
 <?php
+require_once 'partials/header.php';
+?>
+
+<?php
 require_once 'classes/Friend.php';
 require_once 'classes/User.php';
-// include('index.html');
 // [{'id' => 1, 'title' => 'nfeubeu'}]
 // foreach($postIns->getUser() as $user){
 //   echo $user->friendCode . "<br>";
 //   echo $user->name;
 // }
 // ?>
+
+<?php
+require_once 'partials/footer.php';
+?>
 </body>
 <aside>
     <!-- Main Focus Managing Friends Sidebar -->
     <h1>Friends</h1>
-    <!-- <input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+    <!-- <input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
   echo $userIns->friendCode;}?>" id="myInput">
-<button href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+<button href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
   echo $userIns->friendCode;}?>" scr=>Copy Link</button> -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -168,18 +173,18 @@ fjs.parentNode.insertBefore(js, fjs);
 
 <!-- Your share button code -->
 <div class="fb-share-button" 
-data-href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+data-href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>" 
 data-layout="button_count">
 </div>
 
-<button onclick="window.open('https://web.whatsapp.com:/send?text=localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+<button onclick="window.open('https://web.whatsapp.com:/send?text=localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>')"> Open WhatsApp </button>
 
 
-<input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+<input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode($_SESSION['userID']) as $userIns){
 
 echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
 <div class="tooltip">
@@ -189,7 +194,7 @@ echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
 
 </div>
     <p1>Add</p1><br>
-    <p2>Friend Code: <?php foreach($friend->getCode() as $userIns){
+    <p2>Friend Code: <?php foreach($friend->getCode($_SESSION['userID']) as $userIns){
   echo $userIns->friendCode;
 }?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
 

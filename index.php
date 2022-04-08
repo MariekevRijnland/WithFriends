@@ -3,7 +3,6 @@ require_once 'partials/header.php';
 ?>
 <?php
 require_once 'partials/autoLoader.php';
-require_once 'classes/DbConfig.php';
 include 'getLocation.php';
 
 if (!isset($_SESSION['loggedIn'])) {
