@@ -120,9 +120,23 @@ text-align: center;
 }
 
 </style>
-<code>
+<script>
 <!-- JavaScript When needed -->
-</code>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
 <title> W/ Friends | Friends </title>
 <body>
 <?php
@@ -138,43 +152,47 @@ include('index.html');
 </body>
 <aside>
     <!-- Main Focus Managing Friends Sidebar -->
-    <h1>Friends add</h1>
-    
-    <br>
+    <h1>Friends</h1>
+    <!-- <input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+  echo $userIns->friendCode;}?>" id="myInput">
+<button href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+  echo $userIns->friendCode;}?>" scr=>Copy Link</button> -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your share button code -->
+<div class="fb-share-button" 
+data-href="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+
+echo $userIns->friendCode;}?>" 
+data-layout="button_count">
+</div>
+
+<button onclick="window.open('https://web.whatsapp.com:/send?text=localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+
+echo $userIns->friendCode;}?>')"> Open WhatsApp </button>
+
+
+<input type="text" value="localhost/WithFriends/addFriend.php?friendCode=<?php foreach($friend->getFriendCode() as $userIns){
+
+echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+     Copy Friendlink to clipboard  
+  </button>
+
+</div>
+    <p1>Add</p1><br>
     <p2>Friend Code: <?php foreach($friend->getCode() as $userIns){
   echo $userIns->friendCode;
 }?></p2><br> <!-- Friend Code Should Be Pre-Generated On Account Creation? -->
-     <section class="test">
-    <section id="search-box">
-      <form class="item-search-box" method="POST" action="#">
-        <input class="search-input" type="text" name="search" placeholder="Search by friend code.." ></br>
-        <button class="search-btn" type="submit" name="submit-search" value="Zoeken"><i class="fas fa-search"></i>Search</button>
-      </form>
-    </section>
-  </section>
-  <?php
-    require_once 'classes/Friend.php';
-    $serieIns = new Friend();
-    $zoek = new Friend();
 
-    if(isset($_POST["submit-search"])) {
-      // foreach($zoek->search($_POST['search']) as $friends){
-      //   echo $friends;
-      // }
-    }
-?>
-  <section id="fotos">
-            <section id="flex">
-                <?php if(isset($_POST["submit-search"])) {
-                  foreach($zoek->addFriend($_POST['search']) as $friend){?>
-                    <article>
-                        <a href="#" style="color: white;">
-                        <p><?php echo $friend->name; ?></p>
-                        </a>
-                    </article>
-                <?php } }?>
-            </section>
-  </section>
 
     <p1><strong>List</strong></p1><br>
 <?php foreach($user->getFriends() as $userIns) {?>
@@ -186,8 +204,9 @@ include('index.html');
           <button class="friendList">Remove Friend</button>
         </div>
     </div>
-  <?php } ?>
+  <?php } 
+  ?>
     </div></br>
- 
+
 </aside>
 </html>
