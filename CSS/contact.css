@@ -1,98 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 * {
-    box-sizing: border-box;
-  }
-
-  h1{
-    margin-top: 15px;
-  }
-
-  body {
-    font-family: 'Noto Sans';
-    text-align:center ;
-    background-image: url(../img/map-bg.jpeg);
-  }
-
-
-  article {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #ffffff;
-    height: 600px;      
-  }
-  
-  #Query{
+  font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+}
+h1{margin-top: 15px;}
+body {
+  text-align: center ;
+  background-image: url(../img/map-bg.jpeg);
+}
+#question{
   height: 200px;
   display: block;
   width: 300px;
   border-radius:11px;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Contact-Input{
+  width: 300px;
+  margin: 5px 0px;
+}
+#send{
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius:11px;
+  background-color:whitesmoke;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#send:hover {background-color: #48CAE4;}
+.container{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  column-gap: 150px;
+}
+.info {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+ }
+
+@media (max-width: 600px) {
+  #question {width: 100%;}
+  .map {width: 100%; }
+  .container{
+    display:flex;
+    flex-direction: column;
   }
-
-  p.para2{
-    text-align:center ;
-    text-indent: 600px;      
-  }
-
-  section::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-    .contact-form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .Contact-Input{
-      width: 300px;
-      margin: 5px 0px;
-    }
-
-    #button{
-      padding: 10px;
-      margin: 10px 0px;
-      border-radius:11px;
-      background-color:whitesmoke;
-      border-radius: 5px;
-      border: 1px solid black;
-    }
-
-    #button:hover {
-        background-color: #48CAE4;
-        ;}
-    .container{
-      display:flex;
-      flex-direction:row;
-      justify-content: center;
-      column-gap: 150px;
-    }
-   .info {
-       background-color: whitesmoke;
-       border-radius: 5px;
-       border: 1px solid black;
-       margin-bottom: 10px;
-   }
-
-    @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-       }
-
-    #query {
-      width: 100%;
-    }
-
-
-    .map {
-      width: 100%;
-    }
-
-    .container{
-      display:flex;
-      flex-direction: column;
-    }
-
-    
-  }
+}

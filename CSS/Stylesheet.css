@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
 h3{
   justify-content: center;
   text-align: center;
 }
-
 body{
   background-color: #03045E;
   height: 100%;
   width: 100%;
   background-image: url("../images/map-bg.jpeg");
 }
-
 #box1 {
   display: flex;
   margin-top: 4%;
@@ -26,18 +23,15 @@ body{
   padding: 50px;
   margin-left: 21.5vw;
   }
-
   #pass1{
     display: flex;
     flex-direction: column;
   }
-
 .errorMessage {
   color: red !important;
   width: 300px;
   font-weight: bold;
 }
-
 @media screen and (min-width: 1200px){ /*Desktop*/
   #dubb{
     flex-direction: row;
@@ -45,7 +39,6 @@ body{
     margin: 0 8vw;
     margin-top: 0;
   }
-
   #box1 input[type=submit]{
     background-color: #ADE8F4;
     border-radius: 25px;
@@ -53,7 +46,6 @@ body{
     height: 2vw;
     margin-bottom: 1vh;
   }
-
   input[type=text],[type=password],[type=email],[type=submit] select {
   width: 100%;
   padding: 5px;
@@ -62,21 +54,18 @@ body{
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
+  }
   input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
   }
-    
   #pfp {
     display: flex;
     margin-top: -2vw;
     height: 8vw;
     width: 8vw;
   }
- 
   #pfp:hover {
     background-image: url('./img/ChangePFP');
     margin-top: -2vw;
@@ -84,21 +73,18 @@ body{
     width: 8vw;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width:1199px){ /*Tablet*/
   #dubb{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 5vw;
   }
-
   #box1 input[type=submit]{
     background-color: #ADE8F4;
     border-radius: 10px;
     width: 12vw;
     height: 2.5vw;
   }
-
   input[type=text],[type=password],[type=email],[type=submit] select {
     width: 100%;
     padding: 5px;
@@ -108,7 +94,6 @@ body{
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
   input[type=submit]{
     border: none;
     text-align: center;
@@ -116,7 +101,6 @@ body{
     width: 8vw;
     height: 2vw;
   }
-   
   #pfp {
     display: flex;
     margin-top: -10vw;
@@ -124,20 +108,17 @@ body{
     width: 10vw;
   } 
 }
-
 @media screen and (min-width: 100px) and (max-width:767.9px){ /*Telefoon*/
   #dubb{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1.3vw;
   }
-
   input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
   }
-
   input[type=text],[type=password],[type=email],[type=submit] select {
     width: 100%;
     padding: 5px;
@@ -147,14 +128,12 @@ body{
     border-radius: 4px;
     box-sizing: border-box;
   }
-
   #box1 input[type=submit]{
     background-color: #ADE8F4;
     border-radius: 10px;
     width: 25vw;
     height: 6vw;
   }
-
   #box1 {
     display: flex;
     margin-top: 4%;
@@ -168,7 +147,6 @@ body{
     border: 2px #ffffff solid;
     padding: 50px;
   }
-
   #pfp {
     display: flex;
     margin-top: -20vh;

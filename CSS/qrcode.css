@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-* {
-    font-family: "Noto Sans", sans-serif;
-}
+* {font-family: "Noto Sans", sans-serif;}
 body {
     background-image: url('../images/map-bg.jpeg');
     z-index: 5;
@@ -16,7 +14,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 .add {
     position: relative;
     text-align: center;

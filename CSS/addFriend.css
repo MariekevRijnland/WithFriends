@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-* {
-    font-family: "Noto Sans", sans-serif;
-}
-body {
-    background-image: url('../images/map-bg.jpeg');
-}
-
+* {font-family: "Noto Sans", sans-serif;}
+body {background-image: url('../images/map-bg.jpeg');}
 main {
     margin: 50px 15%;
     text-align: center;
@@ -16,9 +11,7 @@ main {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    
 }
-
 .addfriend-btn {
     margin: 1%;
     padding: 10px;
@@ -29,7 +22,6 @@ main {
     background-color: #48CAE4;
     color: white;
 }
-
 @media only screen and (max-width: 699px){
     main {
         width: 100%;

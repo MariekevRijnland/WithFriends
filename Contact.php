@@ -48,10 +48,10 @@
           <div>
             <!-- This is the input for the question -->
             <label for="question">What is your question?</label><br>
-          <textarea class="Contact-Input" id="Query" type="text" name="lname"></textarea>
+          <textarea class="Contact-Input" id="question" type="text" name="lname"></textarea>
         </div>
           <!-- This is the fancy submit button that would send the question to the Database -->
-          <input class="Button" id="button" type="submit" value="Submit"><br>
+          <input class="Button" id="send" type="submit" value="Submit"><br>
         </form>
 
       </div>
