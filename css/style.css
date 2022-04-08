@@ -190,13 +190,14 @@ html {
      left: 0;
      bottom: 0;
      width: 100%;
-     background-color:  whitesmoke;
+     background-color:  white;
      text-align: left;
 }
 .footer li{
     list-style: none;
     float: left;
     padding: 20px;
+    bottom: 0%;
 }
 .footer a:hover {
     position: relative;
