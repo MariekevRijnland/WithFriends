@@ -11,7 +11,7 @@ html {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 14px;
     width: 100%;
     border: none;
     text-align: left;
@@ -29,11 +29,13 @@ html {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #c8c8c8;
-    padding: 20px;
+    background-color: whitesmoke;
+    padding: 14px;
   }
+
   h1 {
       text-align: center;
       padding: 10px;
+      background-color: whitesmoke;
     }
 body {background-image: url(../images/map-bg.jpeg);}
