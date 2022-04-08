@@ -53,7 +53,7 @@ class Friend extends DbConfig
 
     public function addFriend($userID, $friendID)
     {
-        $sql = "INSERT INTO friends (userID, friendID) VALUES (:userid, :friendid) WHERE friendCode = :term";
+        $sql = "INSERT INTO friends (userID, friendID) VALUES (:userid, :friendid)";
 
         $stmt = $this->connect()->prepare($sql);
 
