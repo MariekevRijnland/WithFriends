@@ -3,6 +3,9 @@ require_once 'partials/header.php';
 include 'partials/autoLoader.php';
 include 'getLocation.php';
 
+if (!isset($_GET['friendCode'])) {
+    header('Location: index.php');
+}
 
 $users = $user->getUsers();
 
@@ -18,10 +21,6 @@ if (isset($_POST['yes'])) {
 }
 
 if (isset($_POST['no'])) {
-    header('Location: index.php');
-}
-
-if (!isset($_GET['friendCode'])) {
     header('Location: index.php');
 }
 ?>

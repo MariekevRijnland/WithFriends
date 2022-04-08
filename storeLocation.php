@@ -6,4 +6,3 @@ $data = json_decode($json);
 session_start();
 
 $user->setLocation($_SESSION['userID'], $data->long, $data->lat);
-
