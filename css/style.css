@@ -42,9 +42,9 @@ html {
   }
   
   #brand a {
-    color: black;
-
+    color: #09c372;
   }
+  
   ul {
     list-style: none;
     height: 100%;
@@ -126,9 +126,9 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: whitesmoke;
     z-index: 1;
-    margin-top: -20px;
+    background-color: whitesmoke;
+    margin-top: -20;
   }
   
   .mobile-menu {
@@ -176,6 +176,7 @@ html {
     }
   
   }
+  
 
 /* Footer */
 .footer a{
@@ -201,3 +202,4 @@ html {
     position: relative;
     color: #48CAE4;
 }
+

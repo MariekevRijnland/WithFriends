@@ -1,5 +1,6 @@
 <?php
 require_once './partials/autoLoader.php';
+include './getLocation.php';
 session_start();
 
 $curUser = $user->getUserById($_SESSION['userID']);
