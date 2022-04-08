@@ -1,5 +1,4 @@
 <?php
-require_once './classes/User.php';
 require_once './partials/autoLoader.php';
 session_start();
 

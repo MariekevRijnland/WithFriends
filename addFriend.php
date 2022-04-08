@@ -1,7 +1,8 @@
 <?php
+require_once './partials/header.php';
 include 'partials/autoLoader.php';
 include 'getLocation.php';
-session_start();
+
 
 $users = $user->getUsers();
 
@@ -13,15 +14,15 @@ foreach ($users as $userIns) {
 
 if (isset($_POST['yes'])) {
     $friend->addFriend($_SESSION['userID'], $curFriend->userID);
-    header('Location: index.html');
+    header('Location: index.php');
 }
 
 if (isset($_POST['no'])) {
-    header('Location: index.html');
+    header('Location: index.php');
 }
 
 if (!isset($_GET['friendCode'])) {
-    header('Location: index.html');
+    header('Location: index.php');
 }
 ?>
 <!doctype html>
@@ -37,9 +38,6 @@ if (!isset($_GET['friendCode'])) {
     <title>W/Friends | Add Friend</title>
 </head>
 
-<?php
-require_once './partials/header.php'
-?>
 <body>
 <main>
     <form method="POST">

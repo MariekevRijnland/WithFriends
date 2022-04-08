@@ -47,9 +47,7 @@
             }
 
             public function addFriend($friendID){
-                $term = $term.'%';
-            
-                $sql = "INSERT INTO friends (userID, friendID) VALUES (:userid, :friendid) WHERE friendCode = :term";
+                $sql = "INSERT INTO friends (userID, friendID) VALUES (:userid, :friendid)";
                 
                 $stmt = $this->connect()->prepare($sql);
                 
