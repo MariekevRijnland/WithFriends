@@ -29,7 +29,7 @@ foreach ($friends as $friendIns) {
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <title>Zooming to a Set of Markers</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/map.css"/>
     <link rel="stylesheet" href="CSS/style.css">
 
     <script type="text/javascript" src='js/test-credentials.js'></script>

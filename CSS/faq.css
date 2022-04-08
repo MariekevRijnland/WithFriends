@@ -42,7 +42,4 @@ html {
 body {
   background-image: url(../images/map-bg.jpeg);
   overflow: hidden;
-  position: absolute;
-  height: 200vh;
-
 }

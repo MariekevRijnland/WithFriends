@@ -26,6 +26,7 @@ body {
     font-size: 15px;
     line-height: 22px;
     font-weight: 300;
+    background-image: url(../images/map-bg.jpeg);
 }
 
 .nomargin{

@@ -1,111 +1,13 @@
+<?php include 'partials/autoLoader.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
 <head> 
-  <link rel="stylesheet" href="css/style.css">
-    <title>Contact Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- <style>
-    * {
-      box-sizing: border-box;
-    }
-  
-    h1{
-      margin-top: 15px;
-    }
-
-    body {
-      font-family: 'Noto Sans';
-      text-align:center ;
-      background-image: url("./img/map-bg.jpeg");
-    }
-    
-    article {
-      float: left;
-      padding: 20px;
-      width: 70%;
-      background-color: #ffffff;
-      height: 600px;      
-    }
-    
-    #Query{
-    height: 200px;
-    display: block;
-    width: 300px;
-    border-radius:11px;
-    }
-
-    p.para2{
-      text-align:center ;
-      text-indent: 600px;      
-    }
-
-    section::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-      .contact-form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .Contact-Input{
-        width: 300px;
-        margin: 5px 0px;
-      }
-
-      .button{
-        padding: 10px 40px;
-        margin: 10px 0px;
-        border-radius:11px;
-        background-color:whitesmoke;
-      }
-
-      .container{
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
-        column-gap: 150px;
-      }
-      div{
-      }
-
-      @media (max-width: 600px) {
-      nav, article {
-        width: 100%;
-        height: auto;
-         }
-
-      #query {
-        width: 100%;
-      }
-
-      #button{
-        margin-bottom: 100px;
-      }
-
-      .map {
-        width: 100%;
-      }
-
-      .container{
-        display:flex;
-        flex-direction: column;
-      }
-
-      
-    }
-  </style>
+    <link rel="stylesheet" href="./CSS/contact.css"> 
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>W/Friends | Contact Page</title>
 </head>
-<?php
+<?php require_once './partials/header.php'; ?>
 
-include 'partials/autoLoader.php';
-
-require_once './partials/header.php';
-?>
-
- 
-    
 <body> 
   
   <main>
@@ -118,7 +20,11 @@ require_once './partials/header.php';
           <br><br>
         <p>
           <!-- This is the contact information for wFriends company -->  
-          <strong>Phone Number:</strong> 0882221777  <br> <strong>Email:</strong> mboRijnlandWithFriends@gmail.com <br> <strong>Address:</strong> Van Doornenplantsoen 11 2722 ZA Zoetermeer 
+          <div class="info">
+            <strong>Phone Number:</strong> 0882221777  <br> 
+            <strong>Email:</strong> mboRijnlandWithFriends@gmail.com <br>
+            <strong>Address:</strong> Van Doornenplantsoen 11 2722 ZA Zoetermeer 
+          </div>
         </p>
       </div>
 

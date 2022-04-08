@@ -15,7 +15,7 @@ $curUser = $user->getUserById($_SESSION['userID']);
     <nav>
       <ul>
         <li><a href="#">Messages</a></li>
-        <li><a href="./fullFriendPage.php">Friends</a></li>
+        <li><a href="./friendPage.php">Friends</a></li>
         <li><a href="./Setting-page.php"><?php 
 
           echo$curUser->name ;
