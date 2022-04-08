@@ -144,8 +144,8 @@ body{
 
   #pfp {
     display: flex;
-    margin-top: -10vw;
-    height: 10vw;
-    width: 10vw;
+    margin-top: -20vh;
+    height: 8vh;
+    width: 8vh;
   }
 }
