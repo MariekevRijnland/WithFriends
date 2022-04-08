@@ -15,10 +15,13 @@ function addMarkersAndSetViewBounds() {
   var group = new H.map.Group();
 
   var icon = new H.map.Icon('./images/friend_pointer.png', {size: {w: 40, h: 40}});
+  var locationIcon = new H.map.Icon('./images/myLocation_pointer.png', {size: {w: 40, h: 40}});
 
   friends.forEach(value => {
     friendCoords.push(new H.map.Marker({lat: parseFloat(value.lat), lng: parseFloat(value.long)}, {icon: icon}))
   });
+
+  friendCoords.push(new H.map.Marker({lat: parseFloat(myCoords.lat), lng: parseFloat(myCoords.long)}, {icon: locationIcon}))
 
   // add markers to the group
   group.addObjects(friendCoords);
