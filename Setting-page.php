@@ -6,7 +6,8 @@
     if (!isset($_SESSION['loggedIn'])) {
         header('Location: login.php');
     }
-
+    $_SESSION['userID'];
+    
     $curUser = $user->getUserById($_SESSION['userID']);
 
     if (isset($_POST['CN'])) {
@@ -32,15 +33,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/Stylesheet.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./CSS/Stylesheet.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Setting page</title>
 </head>
 <body>
-<?php require_once 'partials/header.html'?>
-
-<main>
+    <?php
+        require_once "partials/header.html";
+    ?>
     <div id="box1">
         <div id="dubb">
         <break>
@@ -75,9 +77,6 @@
         </form>
         
         <br></br>
-
-            <h5>Change user profile picture</h5>
-            <br></br>
 
         <form method="POST">
             <input type="submit" name="disable" value="Disable account">
