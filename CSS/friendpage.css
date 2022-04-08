@@ -26,12 +26,10 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.FB {
-    background-color: #3b5998;
-    color: white;
-}
-.WA {background-color: #25D366;}
+.WA {background-color: lavender;}
+.WA:hover {background-color: #25D366;}
 .Copy {background-color: lavender;}
+.Copy:hover {background-color: lightsteelblue;}
 button {
     border-radius: 25px;
     padding: 5px;
