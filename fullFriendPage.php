@@ -137,15 +137,8 @@ require_once 'classes/Friend.php';
 require_once 'classes/User.php';
 ?>
 <body>
-<?php
-require_once 'partials/header.php';
-?>
 
 
-
-<?php
-require_once 'partials/footer.php';
-?>
 </body>
 <main>
     <!-- Main Focus Managing Friends Sidebar -->
@@ -197,11 +190,7 @@ echo $userIns->friendCode;}?>" id="myInput" style="display:none;">
           </form>
         </div>
     </div>
-  <?php } 
-  
-      foreach($friend->deleteFriend($_SESSION['userID']) as $delete) {
-        echo $delete->friendID. "<br>";
-      }
+  <?php }
   ?>
     </div></br></br>
 </main>
