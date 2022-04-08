@@ -51,6 +51,7 @@ body{
     border-radius: 25px;
     width: 8vw;
     height: 2vw;
+    margin-bottom: 1vh;
   }
 
   input[type=text],[type=password],[type=email],[type=submit] select {
