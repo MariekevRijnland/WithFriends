@@ -8,8 +8,9 @@
  require_once './partials/header.php';
 ?>
 <body>
-  <div class="hight">
+
     <h1>Fequently Asked Questions</h1>
+
 <button type="button" class="collapsible">Will my data be sold to third parties?</button>
 <div class="content">
   <p>No, your data will not be sold or shared to any other parties but W/Friends Inc.</p>
@@ -45,7 +46,6 @@
 <button type="button" class="collapsible">Who is able to view my location?</button>
 <div class="content">
   <p>Nobody but your friends who you have given permission to see your location, have the ability to view your location on the map, unless you turn off the GPS feature.</p>
-</div>
 </div>
 <script src="./js/faq.js"></script>
 </body>
