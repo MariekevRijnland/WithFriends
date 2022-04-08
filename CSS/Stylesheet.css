@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+h3{
+  justify-content: center;
+  text-align: center;
+}
+
+body{
+  background-color: #03045E;
+  height: 100%;
+  width: 100%;
+}
+
 #box1 {
   display: flex;
   margin-top: 2%;
@@ -14,14 +25,9 @@
   padding: 50px;
   }
 
-  #passcoll{
+  #pass1{
     display: flex;
     flex-direction: column;
-  }
-
-  #passrow{
-    display: flex;
-    flex-direction: row;
   }
 
 .errorMessage {
@@ -34,20 +40,31 @@
   #dubb{
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 5vw;
+    margin: 0 8vw;
+    margin-top: 0;
   }
-  
-  button{
-    border: none;
-    text-align: center;
+
+  #box1 input[type=submit]{
+    background-color: #ADE8F4;
     border-radius: 10px;
     width: 8vw;
     height: 2vw;
   }
 
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
+  input[type=text],[type=password],[type=email],[type=submit] select {
+  width: 100%;
+  padding: 5px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  input[type=submit]{
+    border: none;
+    text-align: center;
+    border-radius: 10px;
   }
     
   #pfp {
@@ -71,20 +88,32 @@
     justify-content: space-between;
     margin: 0 5vw;
   }
+
+  #box1 input[type=submit]{
+    background-color: #ADE8F4;
+    border-radius: 10px;
+    width: 12vw;
+    height: 2.5vw;
+  }
+
+  input[type=text],[type=password],[type=email],[type=submit] select {
+    width: 100%;
+    padding: 5px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
   
-  button{
+  input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
-    width: 12vw;
-    height: 3vw;
+    width: 8vw;
+    height: 2vw;
   }
-
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
-  }
-
+   
   #pfp {
     display: flex;
     margin-top: -10vw;
@@ -93,25 +122,24 @@
   } 
 }
 
-
 @media screen and (min-width: 100px) and (max-width:767.9px){ /*Telefoon*/
   #dubb{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1.3vw;
   }
-  
-  button{
+
+  input[type=submit]{
     border: none;
     text-align: center;
     border-radius: 10px;
-    width: 14vw;
-    height: 10vw;
   }
 
-  #buttons{
-    display: inline-block;
-    flex-direction: row;
+  #box1 input[type=submit]{
+    background-color: #ADE8F4;
+    border-radius: 10px;
+    width: 25vw;
+    height: 6vw;
   }
 
   #pfp {
