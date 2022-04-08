@@ -8,6 +8,7 @@
  require_once './partials/header.php';
 ?>
 <body>
+  <div class="hight">
     <h1>Fequently Asked Questions</h1>
 <button type="button" class="collapsible">Will my data be sold to third parties?</button>
 <div class="content">
@@ -25,9 +26,9 @@
 <div class="content">
   <p>No, the Friend code is a unique code generated at registration. Currently we don’t allow the Friend code to be customized.</p>
 </div>
-<button type="button" class="collapsible">How do I remove my friends?</button>
+<button type="button" class="collapsible">Can I remove my friends?</button>
 <div class="content">
-  <p>You can remove your friends on the home page or on the friends' page. You can use the dropdown of the friend you want to remove and simply press “Remove Friend”.</p>
+  <p>No, currently we don't support removing friends.</p>
 </div>
 <button type="button" class="collapsible">How do I delete my account?</button>
 <div class="content">
@@ -44,6 +45,7 @@
 <button type="button" class="collapsible">Who is able to view my location?</button>
 <div class="content">
   <p>Nobody but your friends who you have given permission to see your location, have the ability to view your location on the map, unless you turn off the GPS feature.</p>
+</div>
 </div>
 <script src="./js/faq.js"></script>
 </body>
