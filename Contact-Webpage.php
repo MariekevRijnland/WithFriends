@@ -30,6 +30,7 @@
     height: 200px;
     display: block;
     width: 300px;
+    border-radius:11px;
     }
 
     p.para2{
@@ -56,6 +57,8 @@
       .button{
         padding: 10px 40px;
         margin: 10px 0px;
+        border-radius:11px;
+        background-color:whitesmoke;
       }
 
       .container{
