@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  background-image: url("../image/map-bg.jpeg");
+  background-image: url("../images/map-bg.jpeg");
 }
 
 body{
@@ -27,8 +27,8 @@ strong{
 }
 
 .logo{
-    height: 140px;
-    width: 140px;
+    height: 90px;
+    width: 130px;
     background: #0077B6;
 }
 .box {
