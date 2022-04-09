@@ -1,3 +1,6 @@
+<head>
+    <title>W/Friends | Setting page</title>
+</head>
 <?php
     $error = '';
     require_once 'partials/autoLoader.php';
@@ -30,69 +33,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Stylesheet.css">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <title>Setting page</title>
-</head>
-<body>
-<?php require_once 'partials/header.php'?>
+    <head>
+        <link rel="stylesheet" href="./CSS/settings.css">
+        <link rel="stylesheet" href="./CSS/style.css">
+    </head>
+    <body>
+        <?php require_once 'partials/header.php'?>
 
-<main>
-    <div id="box1">
-        <div id="dubb">
-        <break>
-
-        <form method="POST">
-            <h3>Change Username</h3>
-                <input type="text" name="name" placeholder="Change name" maxlength="100" size="30" value="<?= $curUser->name ?>"><input type="submit" name="CN" value="Submit">
-                
-        <form>
-
-        <br></br>
-
-        <form method="POST">
-            <h3>Email adress</h3>
-                <input type="email" name="email" placeholder="Change email address" maxlength="100" size="30" value="<?= $curUser->email ?>">
-                <input type="submit" name="CEM" value="Submit">
-        <form>
-            
-        <br></br>
-        
-        <form method="POST">   
-            <h3>Password</h3>
-                <div id="pass1" style="margin-bottom: 10px">
-                        <input type="password" name="password" placeholder="Change password" maxlength="100" size="30">
-                        <input type="password" name="passwordConf" placeholder="Confirm password" maxlength="100" size="30">
-                        <br></br>
-                    <div>
-                        <input type="submit" name="CP" value="Submit">
-                    </div>
-                </div>
-            <?= $error ?>
-        </form>
-        
-        <br></br>
-
-        <form method="POST">
-            <input type="submit" name="disable" value="Disable account">
-
-            <input type="submit" name="delete" value="Delete account">
-
-        </form>
-        </div>
-            <div id="dubb">
+        <div id="backdrop">
+            <div class="pfp">
                 <a href="#"> <!--add href to file exploder-->
                     <img src='./images/default-avatar.png' id="pfp" onmouseover="this.src='./images/ChangePFP.png';" onmouseout="this.src='./images/default-avatar.png';" />
                 </a>
+            </div>  
+            <div class="user_email">
+                <div class="username">
+                    <form method="POST">
+                        <h3>Change Username</h3>
+                            <input type="text" name="name" placeholder="Change name" value="<?= $curUser->name ?>"> <br>
+                            <input type="submit" name="CN" value="Submit">      
+                    <form>
+                </div>
+
+                <div class="email">
+                    <form method="POST">
+                        <h3>Email adress</h3>
+                            <input type="email" name="email" placeholder="Change email address"  value="<?= $curUser->email ?>"> 
+                            <input type="submit" name="CN" value="Submit">
+                    <form>
+                </div>     
+            </div>   
+            <br><br><br><br>
+            <div class="password_d">    
+                <div class="password">
+                    <form method="POST">   
+                        <h3>Password</h3>
+                            <input type="password" name="password" placeholder="Change password">
+                            <input type="password" name="passwordConf" placeholder="Confirm password">
+                            <input type="submit" name="CN" value="Submit">
+                        <?= $error ?>
+                    </form>
+                </div>    
+
+                <div class="delete_disable">
+                    <form method="POST">
+                            <input type="submit" name="disable" value="Disable account">
+                            <br>
+                            <input type="submit" name="delete" value="Delete account">
+                    </form>
+                </div>
             </div>
-    </div>
-</main>
-
-<?php require_once 'partials/footer.php'?>
-
-</body>
+        </div>
+        <?php require_once 'partials/footer.php'?>
+    </body>
 </html>

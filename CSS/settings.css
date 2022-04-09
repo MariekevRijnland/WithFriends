@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  justify-content: center;
+  text-align: center;
+}
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/map-bg.jpeg);
+}
+#backdrop {
+  max-width: 55%;
+  height: auto;
+  border-radius: 25px;
+  background: #55c2fc;
+  border: 2px #ffffff solid;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.username {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    align-items: center;
+}
+ .email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    align-items: center;
+}
+.password {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    align-items: center;
+}
+.delete_disable {
+    position: relative;
+    margin-top: 25px;
+}
+input[type=text],[type=password],[type=email] {
+  margin: 5px;
+  width: 200px;
+  border-radius: 25px;
+  padding: 5px;
+}
+input[type=submit] {
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 25px;
+  background-color: whitesmoke;
+}
+input[type=submit]:hover {background-color: #ADE8F4;}
+.pfp {margin-bottom: 20px;}
+.user_email, .password_d, .pfp {
+  display: flex;
+  justify-content: center;
+}
+.password_d {
+  position: relative;
+  left: -40px;
+}
+.user_email {
+  position: relative;
+  text-align: center;
+}
+#pfp{width: 100px;}
+.errorMessage {
+  color: red !important;
+  width: 300px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 844px){
+  .user_email {
+    display: flex;
+    flex-direction: column;
+  }
+  .email {left: -5px;}
+  .password_d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 2px;
+  }
+  .delete_disable {text-align: center;}
+}
